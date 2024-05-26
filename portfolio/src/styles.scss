@@ -91,7 +91,59 @@ html, body { height: 100%; }
   'opsz' 24
 }
 
-.change-theme{
-  padding: 8px;
-  width: 48px;
+section {
+  display: table;
+}
+
+.example-label {
+  display: table-cell;
+  font-size: 14px;
+  margin-left: 8px;
+  min-width: 120px;
+}
+
+.example-button-row {
+  display: table-cell;
+  max-width: 600px;
+}
+
+.example-button-row .mat-mdc-button-base {
+  margin: 8px 8px 8px 0;
+}
+
+.example-flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.example-button-container {
+  display: flex;
+  justify-content: center;
+  width: 120px;
+}
+
+.nav-button{
+  width: 144px;
+  margin-bottom: 90px !important;
+}
+
+ .dark-theme .nav-link {
+  color: gray ;
+}
+
+.dark-theme .nav-link.active{
+  color: white;
+}
+
+.dark-theme .navbar-brand{
+    color: white;
+}
+
+.dark-theme .customNav{
+  border-bottom: 1px solid white;
+}
+
+.light-theme .customNav{
+  border-bottom: 1px solid black;
 }

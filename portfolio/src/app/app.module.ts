@@ -9,10 +9,18 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { HomeComponent } from './home/home.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { ThemeButtonChangeComponent } from './theme-button-change/theme-button-change.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    NavbarComponent,
+    ThemeButtonChangeComponent
   ],
   imports: [
     BrowserModule,
@@ -22,6 +30,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatDividerModule,
     MatButtonModule,
     MatToolbarModule,
+    BrowserAnimationsModule,
 
   ],
   providers: [
