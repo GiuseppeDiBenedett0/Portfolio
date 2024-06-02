@@ -13,14 +13,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { ThemeButtonChangeComponent } from './theme-button-change/theme-button-change.component';
+import { AboutMeComponent } from './about-me/about-me.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    ThemeButtonChangeComponent
+    AboutMeComponent
   ],
   imports: [
     BrowserModule,

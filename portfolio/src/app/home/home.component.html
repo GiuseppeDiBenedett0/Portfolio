@@ -1,8 +1,16 @@
 <div class="container">
-    <div class="main-home-content d-flex position-absolute">
-        <div class=" justify-content-center text-center">
-            <h1 class="main-h1-content m-5">Ciao, sono Giuseppe Di Benedetto</h1>
-            <p class="main-p-content m-5">La grande muraglia è caduta sotto i colpi dei nostri nemici africani grande pazzo senza il cazzo</p>
-        </div>
+  <div class="main-home-content d-flex position-absolute" @fadeIn>
+    <div class="justify-content-center text-center">
+      <h1 class="main-h1-content m-5 color-title">
+        Ciao, sono Giuseppe Di Benedetto
+      </h1>
+      <p class="main-p-content m-5">
+        La grande muraglia è caduta sotto i colpi dei nostri nemici africani
+        grande pazzo senza il cazzo
+      </p>
+      <button class="path-about-button" mat-stroked-button color="accent" (click)="navigateByButton('About-me')">
+        Conoscimi meglio
+      </button>
     </div>
+  </div>
 </div>

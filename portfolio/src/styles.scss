@@ -1,12 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 
 /* Importing Bootstrap SCSS file. */
-@use '@angular/material' as mat;
+@use "@angular/material" as mat;
 @include mat.core();
-@import 'bootstrap/scss/bootstrap';
+@import "bootstrap/scss/bootstrap";
 @import "./palette.scss";
 //Aggiunta del font Montserrat
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap");
 
 //Stile tipografico
 $montserrat-typography-level: mat.define-typography-level(
@@ -19,76 +19,168 @@ $montserrat-typography-level: mat.define-typography-level(
 
 //Definizione dei vari livelli tipografici
 $montserrat-typography-config: mat.define-typography-config(
-  $headline-1: mat.define-typography-level(112px, 112px, 300, $font-family: 'Montserrat, sans-serif', $letter-spacing: -0.05em),
-  $headline-2: mat.define-typography-level(56px, 56px, 400, $font-family: 'Montserrat, sans-serif', $letter-spacing: -0.02em),
-  $headline-3: mat.define-typography-level(45px, 48px, 400, $font-family: 'Montserrat, sans-serif', $letter-spacing: -0.005em),
-  $headline-4: mat.define-typography-level(34px, 40px, 400, $font-family: 'Montserrat, sans-serif'),
-  $headline-5: mat.define-typography-level(24px, 32px, 400, $font-family: 'Montserrat, sans-serif'),
-  $headline-6: mat.define-typography-level(20px, 32px, 500, $font-family: 'Montserrat, sans-serif'),
-  $subtitle-1: mat.define-typography-level(16px, 24px, 400, $font-family: 'Montserrat, sans-serif'),
-  $subtitle-2: mat.define-typography-level(14px, 24px, 500, $font-family: 'Montserrat, sans-serif'),
-  $body-1: mat.define-typography-level(16px, 28px, 400, $font-family: 'Montserrat, sans-serif'),
-  $body-2: mat.define-typography-level(14px, 24px, 400, $font-family: 'Montserrat, sans-serif'),
-  $button: mat.define-typography-level(14px, 24px, 500, $font-family: 'Montserrat, sans-serif', $letter-spacing: 0.125em),
-  $caption: mat.define-typography-level(12px, 20px, 400, $font-family: 'Montserrat, sans-serif'),
-  $overline: mat.define-typography-level(10px, 16px, 400, $font-family: 'Montserrat, sans-serif', $letter-spacing: 0.15em)
+  $headline-1:
+    mat.define-typography-level(
+      112px,
+      112px,
+      300,
+      $font-family: "Montserrat, sans-serif",
+      $letter-spacing: -0.05em
+    ),
+  $headline-2:
+    mat.define-typography-level(
+      56px,
+      56px,
+      400,
+      $font-family: "Montserrat, sans-serif",
+      $letter-spacing: -0.02em
+    ),
+  $headline-3:
+    mat.define-typography-level(
+      45px,
+      48px,
+      400,
+      $font-family: "Montserrat, sans-serif",
+      $letter-spacing: -0.005em
+    ),
+  $headline-4:
+    mat.define-typography-level(
+      34px,
+      40px,
+      400,
+      $font-family: "Montserrat, sans-serif"
+    ),
+  $headline-5:
+    mat.define-typography-level(
+      24px,
+      32px,
+      400,
+      $font-family: "Montserrat, sans-serif"
+    ),
+  $headline-6:
+    mat.define-typography-level(
+      20px,
+      32px,
+      500,
+      $font-family: "Montserrat, sans-serif"
+    ),
+  $subtitle-1:
+    mat.define-typography-level(
+      16px,
+      24px,
+      400,
+      $font-family: "Montserrat, sans-serif"
+    ),
+  $subtitle-2:
+    mat.define-typography-level(
+      14px,
+      24px,
+      500,
+      $font-family: "Montserrat, sans-serif"
+    ),
+  $body-1:
+    mat.define-typography-level(
+      16px,
+      28px,
+      400,
+      $font-family: "Montserrat, sans-serif"
+    ),
+  $body-2:
+    mat.define-typography-level(
+      14px,
+      24px,
+      400,
+      $font-family: "Montserrat, sans-serif"
+    ),
+  $button:
+    mat.define-typography-level(
+      14px,
+      24px,
+      500,
+      $font-family: "Montserrat, sans-serif",
+      $letter-spacing: 0.125em
+    ),
+  $caption:
+    mat.define-typography-level(
+      12px,
+      20px,
+      400,
+      $font-family: "Montserrat, sans-serif"
+    ),
+  $overline:
+    mat.define-typography-level(
+      10px,
+      16px,
+      400,
+      $font-family: "Montserrat, sans-serif",
+      $letter-spacing: 0.15em
+    ),
 );
 
 //Inclusione della gerarchia tipografica
 @include mat.typography-hierarchy($montserrat-typography-config);
 
 //Applicazione della gerarchia tipografica al progetto
-body{
+body {
   @include mat.typography-hierarchy($montserrat-typography-config);
 }
 
-.dark-theme{
+.dark-theme {
   background-color: black;
   color: white;
   $dark-theme-primary: mat.define-palette($md-mcglight);
   $dark-theme-accent: mat.define-palette($md-mcgaccent, A400);
   $dark-theme-warn: mat.define-palette(mat.$red-palette);
-  
-  $portfolio-dark-theme: mat.define-dark-theme((
+
+  $portfolio-dark-theme: mat.define-dark-theme(
+    (
       color: (
-          primary: $dark-theme-primary,
-          accent: $dark-theme-accent,
-          warn: $dark-theme-warn,
+        primary: $dark-theme-primary,
+        accent: $dark-theme-accent,
+        warn: $dark-theme-warn,
       ),
-  ));
-  
+    )
+  );
+
   @include mat.all-component-themes($portfolio-dark-theme);
 }
 
+.light-theme {
+  background-color: #fbfbfb;
+  $light-theme-basic: mat.define-palette($md-mcgdark, A100);
+  $light-theme-primary: mat.define-palette($md-mcgdark);
+  $light-theme-accent: mat.define-palette($md-mcgaccent);
+  $light-theme-warn: mat.define-palette(mat.$red-palette);
 
-.light-theme{
-    background-color: white;
-    $light-theme-basic: mat.define-palette($md-mcgdark, A100);
-    $light-theme-primary: mat.define-palette($md-mcgdark);
-    $light-theme-accent: mat.define-palette($md-mcgaccent);
-    $light-theme-warn: mat.define-palette(mat.$red-palette);
+  $portfolio-light-theme: mat.define-light-theme(
+    (
+      color: (
+        primary: $light-theme-primary,
+        accent: $light-theme-accent,
+        warn: $light-theme-warn,
+      ),
+    )
+  );
 
-    
-    $portfolio-light-theme: mat.define-light-theme((
-        color: (
-            primary: $light-theme-primary,
-            accent: $light-theme-accent,
-            warn: $light-theme-warn,
-        ),
-    ));
-    
-    @include mat.all-component-themes($portfolio-light-theme);
+  @include mat.all-component-themes($portfolio-light-theme);
 }
 
-html, body { height: 100%; }
+html,
+body {
+  height: 100%;
+}
+
+.dark-theme .color-title {
+  color: #ff6666;
+}
+
+.light-theme .color-title {
+  color: #a8243a;
+}
 
 .material-symbols-outlined {
   cursor: pointer;
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
 }
 
 section {
@@ -123,27 +215,176 @@ section {
   width: 120px;
 }
 
-.nav-button{
+.nav-button {
   width: 144px;
   margin-bottom: 90px !important;
 }
 
- .dark-theme .nav-link {
-  color: gray ;
+.dark-theme .nav-link {
+  color: #9b9b9b;
 }
 
-.dark-theme .nav-link.active{
-  color: white;
+.light-theme .nav-link {
+  color: #dcdcdc;
 }
 
-.dark-theme .navbar-brand{
-    color: white;
+.dark-theme .nav-link.active {
+  color: rgb(255, 255, 255) !important;
+}
+.dark-theme .nav-link:hover {
+  color: rgb(173, 173, 173);
 }
 
-.dark-theme .customNav{
+.light-theme .nav-link:hover {
+  color: rgb(54, 54, 54);
+}
+
+.dark-theme #change-theme:hover {
+  border: none;
+}
+
+.light-theme #change-theme:hover {
+  border: none;
+}
+
+.dark-theme .navbar-brand {
+  color: white !important;
+}
+
+.dark-theme .customNav {
   border-bottom: 1px solid white;
 }
 
-.light-theme .customNav{
+.light-theme .customNav {
   border-bottom: 1px solid black;
 }
+
+.dark-theme .bg-body-tertiary {
+  background-color: #062127 !important;
+}
+
+.light-theme .bg-body-tertiary {
+  background-color: #30525a !important;
+}
+
+.dark-theme .navbar-toggler {
+  color: whitesmoke;
+}
+
+.card {
+  margin: 16px;
+}
+
+.card-title {
+  font-size: 1.3rem !important;
+  line-height: 1.6 !important;
+}
+
+.dark-theme .card {
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 0;
+}
+
+.light-theme .card {
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 0;
+}
+
+.dark-theme .card-title-section {
+  border-bottom: 1px solid whitesmoke;
+}
+
+.light-theme .card-title-section {
+  border-bottom: 1px solid black;
+}
+
+.dark-theme .card-title {
+  color: #ff6666;
+}
+
+.light-theme .card-title {
+  color: #b01111;
+}
+
+.dark-theme .skill-list {
+  color: whitesmoke;
+}
+
+.light-theme .skill-list {
+  color: black;
+}
+
+.dark-theme .card {
+  transition: transform 0.3s ease;
+  background: linear-gradient(
+    90deg,
+    #ff0000 0%,
+    #ff9a00 10%,
+    #d0de21 20%,
+    #4fdc4a 30%,
+    #3fdad8 40%,
+    #2fc9e2 50%,
+    #1c7fee 60%,
+    #5f15f2 70%,
+    #ba0cf8 80%,
+    #fb07d9 90%,
+    #ff0000 100%
+  );
+  background-size: 200% 200%;
+  animation: anim 2s linear infinite;
+}
+
+.dark-theme .card:hover {
+  border: none;
+  transform: scale(1.1);
+  padding: 2px;
+}
+
+.dark-theme .card-body {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+.light-theme .card {
+  transition: transform 0.3s ease;
+  background: linear-gradient(
+    90deg,
+    #ff0000 0%,
+    #ff9a00 10%,
+    #d0de21 20%,
+    #4fdc4a 30%,
+    #3fdad8 40%,
+    #2fc9e2 50%,
+    #1c7fee 60%,
+    #5f15f2 70%,
+    #ba0cf8 80%,
+    #fb07d9 90%,
+    #ff0000 100%
+  );
+  background-size: 200% 200%;
+  animation: anim 2s linear infinite;
+}
+
+.light-theme .card:hover {
+  border: none;
+  transform: scale(1.1);
+  padding: 2px;
+}
+
+.light-theme .card-body {
+  width: 100%;
+  height: 100%;
+  background-color: whitesmoke;
+}
+
+@keyframes anim {
+  100% {
+    background-position-x: -200%;
+  }
+}
+
+/* Importing Bootstrap SCSS file. */
+@import "bootstrap/scss/bootstrap";

@@ -1,0 +1,78 @@
+.about-me-content {
+  padding-top: 112px;
+}
+
+.about-me-h1-content {
+  font-size: 2.5rem;
+  line-height: 1.6;
+  margin: 0;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  margin-top: 16px;
+}
+
+.about-me-h2-content {
+  font-size: 2.2rem;
+  line-height: 1.6;
+  margin: 0;
+  text-transform: uppercase;
+  margin-bottom: 80px;
+}
+
+.about-me-p-content {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skill-list-item {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.logo {
+  width: 32px;
+  height: 32px;
+  margin-right: 16px;
+}
+
+.path-portfolio-button {
+  width: 290px;
+  height: 60px;
+  font-size: large;
+  transition: transform 0.3s ease;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.path-portfolio-button:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+  .about-me-h1-content {
+    font-size: 2rem;
+  }
+
+  .about-me-h2-content {
+    font-size: 1.8rem;
+  }
+
+  .about-me-p-content {
+    font-size: 1rem;
+  }
+
+  .path-portfolio-button {
+    width: 240px;
+    height: 45px;
+    font-size: medium;
+  }
+}

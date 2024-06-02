@@ -1,12 +1,39 @@
-.bg-body-tertiary{
-  background-color: transparent !important;
-}
-
 .nav-item{
   padding: 16px;
   font-size: large;
 }
 
 .navbar-brand{
-  font-size: x-large;
+  display: flex;
+}
+
+.nav-link{
+  cursor: pointer;
+}
+
+.change-theme-button{
+  padding: 8px;
+}
+
+@media (max-width: 991px){
+  
+  .nav-item{
+    border-top: 1px solid;
+  }
+
+  .navbar-brand{
+    padding: 16px;
+  }
+
+  .nav-link:hover{
+    border: none;
+  }
+
+  .nav-link.active{
+    border: none;
+  }
+
+  #home{
+    border: none;
+  }
 }
