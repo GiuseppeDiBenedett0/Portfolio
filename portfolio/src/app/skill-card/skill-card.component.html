@@ -1,0 +1,14 @@
+<div class="card" style="width: 18rem">
+  <div class="card-body">
+    <div class="card-title-section">
+      <h5 class="card-title">{{ title }}</h5>
+    </div>
+    <ul class="skill-list text-start">
+      <li class="skill-list-item" *ngFor="let skill of skills">
+        <img class="logo" [src]="skill.logo" [alt]="skill.name + 'logo'" />{{
+          skill.name
+        }}
+      </li>
+    </ul>
+  </div>
+</div>

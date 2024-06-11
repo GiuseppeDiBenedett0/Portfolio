@@ -127,7 +127,9 @@ body {
 
 .dark-theme {
   background-color: black;
-  color: white;
+  background-image: url(../src/assets/dark-theme-squares.svg);
+  background-attachment: fixed;
+
   $dark-theme-primary: mat.define-palette($md-mcglight);
   $dark-theme-accent: mat.define-palette($md-mcgaccent, A400);
   $dark-theme-warn: mat.define-palette(mat.$red-palette);
@@ -147,6 +149,9 @@ body {
 
 .light-theme {
   background-color: #fbfbfb;
+  background-image: url(../src/assets/light-theme-squares.svg);
+  background-attachment: fixed;
+  
   $light-theme-basic: mat.define-palette($md-mcgdark, A100);
   $light-theme-primary: mat.define-palette($md-mcgdark);
   $light-theme-accent: mat.define-palette($md-mcgaccent);
@@ -171,11 +176,21 @@ body {
 }
 
 .dark-theme .color-title {
-  color: #ff6666;
+  color: map-get($md-mcglight, 50);
+  font-weight: 900;
 }
 
 .light-theme .color-title {
-  color: #a8243a;
+  color: map-get($md-mcgdark, 900);
+  font-weight: 900;
+}
+
+.dark-theme p {
+  color: map-get($md-mcglight, 600);
+}
+
+.light-theme p {
+  color: map-get($md-mcgdark, 300);
 }
 
 .material-symbols-outlined {
@@ -221,34 +236,19 @@ section {
 }
 
 .dark-theme .nav-link {
-  color: #9b9b9b;
+  color: map-get($md-mcglight, A400);
 }
 
 .light-theme .nav-link {
-  color: #dcdcdc;
+  color: map-get($md-mcgdark, 500);
 }
 
-.dark-theme .nav-link.active {
-  color: rgb(255, 255, 255) !important;
-}
 .dark-theme .nav-link:hover {
-  color: rgb(173, 173, 173);
+  color: map-get($md-mcgaccent, A200);
 }
 
 .light-theme .nav-link:hover {
-  color: rgb(54, 54, 54);
-}
-
-.dark-theme #change-theme:hover {
-  border: none;
-}
-
-.light-theme #change-theme:hover {
-  border: none;
-}
-
-.dark-theme .navbar-brand {
-  color: white !important;
+  color: map-get($md-mcgaccent, A700);
 }
 
 .dark-theme .customNav {
@@ -260,15 +260,11 @@ section {
 }
 
 .dark-theme .bg-body-tertiary {
-  background-color: #062127 !important;
+  background-color: map-get($md-mcgaccent, 800) !important;
 }
 
 .light-theme .bg-body-tertiary {
-  background-color: #30525a !important;
-}
-
-.dark-theme .navbar-toggler {
-  color: whitesmoke;
+  background-color: map-get($md-mcgaccent, 400) !important;
 }
 
 .card {
@@ -301,19 +297,21 @@ section {
 }
 
 .dark-theme .card-title {
-  color: #ff6666;
+  color: map-get($md-mcglight, 50);
+  font-weight: 600;
 }
 
 .light-theme .card-title {
-  color: #b01111;
+  color: map-get($md-mcgdark, 900);
+  font-weight: 600;
 }
 
 .dark-theme .skill-list {
-  color: whitesmoke;
+  color: map-get($md-mcglight, 50);
 }
 
 .light-theme .skill-list {
-  color: black;
+  color: map-get($md-mcgdark, 900);
 }
 
 .dark-theme .card {

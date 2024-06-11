@@ -10,17 +10,24 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AboutMeComponent } from './about-me/about-me.component';
+import { SkillCardComponent } from './skill-card/skill-card.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
+import { ProjectCardComponent } from './project-card/project-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    AboutMeComponent
+    AboutMeComponent,
+    SkillCardComponent,
+    PortfolioComponent,
+    ProjectCardComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,6 +38,7 @@ import { AboutMeComponent } from './about-me/about-me.component';
     MatButtonModule,
     MatToolbarModule,
     BrowserAnimationsModule,
+    HttpClientModule,
 
   ],
   providers: [

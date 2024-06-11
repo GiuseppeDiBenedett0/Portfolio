@@ -1,4 +1,4 @@
-<div class="container about-me-content d-flex">
+<div class="container about-me-content d-flex" @fadeIn>
   <div class="text-center justify-content-center">
     <h1 class="about-me-h1-content color-title">Parliamo di me</h1>
 
@@ -25,157 +25,29 @@
     <h2 class="about-me-h2-content color-title">Le mie skill</h2>
     <div class="justify-content-center">
       <div class="row">
-        <div class="col d-flex justify-content-center">
-          <div class="card" style="width: 18rem">
-            <div class="card-body">
-              <div class="card-title-section">
-                <h5 class="card-title">Front-End</h5>
-              </div>
-
-              <ul class="skill-list text-start">
-                <li class="skill-list-item">
-                  <img
-                    class="logo"
-                    src="../../assets/HTML-logo.webp"
-                    alt="HTML logo"
-                  />HTML
-                </li>
-                <li class="skill-list-item">
-                  <img
-                    class="logo"
-                    src="../../assets/CSS3_logo.svg.png"
-                    alt="CSS logo"
-                  />CSS
-                </li>
-                <li class="skill-list-item">
-                  <img
-                    class="logo"
-                    src="../../assets/javascript-1.svg"
-                    alt="Javascript logo"
-                  />JAVASCRIPT
-                </li>
-                <li class="skill-list-item">
-                  <img
-                    class="logo"
-                    src="../../assets/Typescript_logo_2020.svg.png"
-                    alt="Typescript logo"
-                  />TYPESCRIPT
-                </li>
-              </ul>
-            </div>
-          </div>
+        <div class="col d-flex justify-content-center mb-4 mt-3">
+          <app-skill-card
+            title="Front-End"
+            [skills]="frontEndSkills"
+          ></app-skill-card>
         </div>
 
-        <div class="col d-flex justify-content-center">
-          <div class="card" style="width: 18rem">
-            <div class="card-body">
-              <div class="card-title-section">
-                <h5 class="card-title">Back-End</h5>
-              </div>
-
-              <ul class="skill-list text-start">
-                <li class="skill-list-item">
-                  <img
-                    class="logo"
-                    src="../../assets/C-logo.png"
-                    alt="C logo"
-                  />C
-                </li>
-                <li class="skill-list-item">
-                  <img
-                    class="logo"
-                    src="../../assets/java.svg"
-                    alt="Java logo"
-                  />JAVA
-                </li>
-                <li class="skill-list-item">
-                  <img
-                    class="logo"
-                    src="../../assets/spring-3.svg"
-                    alt="Spring logo"
-                  />
-                  SPRING
-                </li>
-                <li class="skill-list-item">
-                  <img
-                    class="logo"
-                    src="../../assets/nodejs-logo-FBE122E377-seeklogo.com.png"
-                    alt="Node.js logo"
-                  />
-                  NODE.JS
-                </li>
-                <li class="skill-list-item">
-                  <img
-                    class="logo"
-                    src="../../assets/mysql-logo-B4943FE6DD-seeklogo.com.png"
-                    alt="My sql logo"
-                  />
-                  MYSQL
-                </li>
-              </ul>
-            </div>
-          </div>
+        <div class="col d-flex justify-content-center mb-4 mt-3">
+          <app-skill-card
+            title="Back-End"
+            [skills]="backEndSkills"
+          ></app-skill-card>
         </div>
 
-        <div class="col d-flex justify-content-center">
-          <div class="card" style="width: 18rem">
-            <div class="card-body">
-              <div class="card-title-section">
-                <h5 class="card-title">Framework</h5>
-              </div>
-
-              <ul class="skill-list text-start">
-                <li class="skill-list-item">
-                  <img
-                    class="logo"
-                    src="../../assets/Bootstrap_logo.svg.png"
-                    alt="Bootstrap logo"
-                  />BOOTSTRAP
-                </li>
-                <li class="skill-list-item">
-                  <img
-                    class="logo"
-                    src="../../assets/Angular_full_color_logo.svg.png"
-                    alt="Angular logo"
-                  />ANGULAR
-                </li>
-                <li class="skill-list-item">
-                  <img
-                    class="logo"
-                    src="../../assets/material.png"
-                    alt="Angular material logo"
-                  />ANGULAR MATERIAL
-                </li>
-              </ul>
-            </div>
-          </div>
+        <div class="col d-flex justify-content-center mb-4 mt-3">
+          <app-skill-card
+            title="Framework"
+            [skills]="frameworkSkills"
+          ></app-skill-card>
         </div>
 
-        <div class="col d-flex justify-content-center">
-          <div class="card" style="width: 18rem">
-            <div class="card-body">
-              <div class="card-title-section">
-                <h5 class="card-title">Tools</h5>
-              </div>
-
-              <ul class="skill-list text-start">
-                <li class="skill-list-item">
-                  <img
-                    class="logo"
-                    src="../../assets/Git_icon.svg.png"
-                    alt="Git logo"
-                  />GIT
-                </li>
-                <li class="skill-list-item">
-                  <img
-                    class="logo"
-                    src="../../assets/Octicons-mark-github.svg"
-                    alt="GitHub logo"
-                  />GITHUB
-                </li>
-              </ul>
-            </div>
-          </div>
+        <div class="col d-flex justify-content-center mb-4 mt-3">
+          <app-skill-card title="Tools" [skills]="toolsSkills"></app-skill-card>
         </div>
       </div>
     </div>
