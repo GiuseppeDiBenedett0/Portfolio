@@ -18,6 +18,7 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { SkillCardComponent } from './skill-card/skill-card.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ProjectCardComponent } from './project-card/project-card.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { ProjectCardComponent } from './project-card/project-card.component';
     SkillCardComponent,
     PortfolioComponent,
     ProjectCardComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,

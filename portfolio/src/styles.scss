@@ -52,22 +52,22 @@ $montserrat-typography-config: mat.define-typography-config(
     ),
   $headline-5:
     mat.define-typography-level(
-      24px,
-      32px,
+      4rem,
+      1.6,
       400,
       $font-family: "Montserrat, sans-serif"
     ),
   $headline-6:
     mat.define-typography-level(
-      20px,
-      32px,
+      2.2rem,
+      1.6,
       500,
       $font-family: "Montserrat, sans-serif"
     ),
   $subtitle-1:
     mat.define-typography-level(
-      16px,
-      24px,
+      2.0rem,
+      1.6,
       400,
       $font-family: "Montserrat, sans-serif"
     ),
@@ -87,8 +87,8 @@ $montserrat-typography-config: mat.define-typography-config(
     ),
   $body-2:
     mat.define-typography-level(
-      14px,
-      24px,
+      1.3rem,
+      1.6,
       400,
       $font-family: "Montserrat, sans-serif"
     ),
@@ -126,7 +126,7 @@ body {
 }
 
 .dark-theme {
-  background-color: black;
+  background-color: map-get($md-mcgdark, 500);
   background-image: url(../src/assets/dark-theme-squares.svg);
   background-attachment: fixed;
 
@@ -148,7 +148,7 @@ body {
 }
 
 .light-theme {
-  background-color: #fbfbfb;
+  background-color: map-get($md-mcglight, 200);
   background-image: url(../src/assets/light-theme-squares.svg);
   background-attachment: fixed;
   
@@ -175,13 +175,29 @@ body {
   height: 100%;
 }
 
+.path-button{
+  width: 290px;
+  height: 60px !important;
+  font-size: large !important;
+  text-transform: uppercase !important;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.dark-theme .path-button{
+  background-color: map-get($md-mcgaccent, 500);
+}
+
+.light-theme .path-button{
+  background-color: map-get($md-mcgaccent, 400);
+}
+
 .dark-theme .color-title {
-  color: map-get($md-mcglight, 50);
+  color: map-get($md-mcglight, 300);
   font-weight: 900;
 }
 
 .light-theme .color-title {
-  color: map-get($md-mcgdark, 900);
+  color: map-get($md-mcgdark, 400);
   font-weight: 900;
 }
 
@@ -252,20 +268,42 @@ section {
 }
 
 .dark-theme .customNav {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid map-get($md-mcgdark, 50);
 }
 
 .light-theme .customNav {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid map-get($md-mcgdark, 500);
 }
 
 .dark-theme .bg-body-tertiary {
-  background-color: map-get($md-mcgaccent, 800) !important;
+  background-color: map-get( $md-mcgaccent, 500) !important;
 }
 
 .light-theme .bg-body-tertiary {
   background-color: map-get($md-mcgaccent, 400) !important;
 }
+
+//Personalizzazione scrollbar Chrome e Safari
+
+::-webkit-scrollbar{
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb{
+  border-radius: 5px;
+}
+
+.dark-theme::-webkit-scrollbar-thumb{
+  background: map-get($md-mcgdark, 50);
+  border-radius: 5px;
+}
+
+.light-theme::-webkit-scrollbar-thumb{
+  background: map-get($md-mcgdark, 400);
+  border-radius: 5px;
+}
+
+//Personalizzazione card
 
 .card {
   margin: 16px;
@@ -278,22 +316,20 @@ section {
 
 .dark-theme .card {
   background-color: transparent;
-  border: 1px solid white;
-  border-radius: 0;
+  border: 1px solid map-get($md-mcgdark, 50);
 }
 
 .light-theme .card {
   background-color: transparent;
-  border: 1px solid black;
-  border-radius: 0;
+  border: 1px solid map-get($md-mcgdark, 500);
 }
 
 .dark-theme .card-title-section {
-  border-bottom: 1px solid whitesmoke;
+  border-bottom: 1px solid map-get($md-mcgdark, 50);
 }
 
 .light-theme .card-title-section {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid map-get($md-mcgdark, 500);
 }
 
 .dark-theme .card-title {
@@ -314,74 +350,24 @@ section {
   color: map-get($md-mcgdark, 900);
 }
 
-.dark-theme .card {
-  transition: transform 0.3s ease;
-  background: linear-gradient(
-    90deg,
-    #ff0000 0%,
-    #ff9a00 10%,
-    #d0de21 20%,
-    #4fdc4a 30%,
-    #3fdad8 40%,
-    #2fc9e2 50%,
-    #1c7fee 60%,
-    #5f15f2 70%,
-    #ba0cf8 80%,
-    #fb07d9 90%,
-    #ff0000 100%
-  );
-  background-size: 200% 200%;
-  animation: anim 2s linear infinite;
-}
-
-.dark-theme .card:hover {
-  border: none;
-  transform: scale(1.1);
-  padding: 2px;
-}
-
-.dark-theme .card-body {
+.dark-theme .skill-card-body {
   width: 100%;
   height: 100%;
-  background-color: black;
+  background-color: map-get($md-mcgdark, 500);
 }
 
-.light-theme .card {
-  transition: transform 0.3s ease;
-  background: linear-gradient(
-    90deg,
-    #ff0000 0%,
-    #ff9a00 10%,
-    #d0de21 20%,
-    #4fdc4a 30%,
-    #3fdad8 40%,
-    #2fc9e2 50%,
-    #1c7fee 60%,
-    #5f15f2 70%,
-    #ba0cf8 80%,
-    #fb07d9 90%,
-    #ff0000 100%
-  );
-  background-size: 200% 200%;
-  animation: anim 2s linear infinite;
-}
-
-.light-theme .card:hover {
-  border: none;
-  transform: scale(1.1);
-  padding: 2px;
-}
-
-.light-theme .card-body {
+.light-theme .skill-card-body {
   width: 100%;
   height: 100%;
-  background-color: whitesmoke;
+  background-color: map-get($md-mcglight, 300);
 }
 
-@keyframes anim {
-  100% {
-    background-position-x: -200%;
-  }
+.dark-theme .tool{
+  background-color: map-get($md-mcgdark, 400 )
+}
+
+.light-theme .tool{
+  background-color: map-get($md-mcglight, 700 )
 }
 
 /* Importing Bootstrap SCSS file. */

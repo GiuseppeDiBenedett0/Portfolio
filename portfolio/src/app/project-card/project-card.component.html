@@ -1,14 +1,31 @@
-<div class="card mb-3" style="max-width: 540px;">
-    <div class="row g-0">
-      <div class="col-md-4">
-        <img src="..." class="img-fluid rounded-start" alt="...">
+<div class="container" *ngFor="let project of projects">
+  <div class="row">
+    <div class="col-12 text-center">
+      <h3 class="color-title mt-5">{{ project.title }}</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 d-flex justify-content-center">
+      <div class="card text-bg-dark">
+        <div class="image-container">
+          <img [src]="project.projectPreview" class="card-img" />
+        </div>
       </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+    </div>
+    <div class="tools-group col-md-6 d-flex flex-column text-start">
+      <p class="p-project">{{ project.description }}</p>
+      <div class="tool-list container mt-4 p-0">
+        <div class="row">
+          <h3 class="color-title">Strumenti utilizzati</h3>
+          <div class="col-6 col-sm-4 mb-3" *ngFor="let tool of project.tools">
+            <div
+              class="tool d-flex justify-content-center align-items-center mb-3"
+            >
+              <p class="toolsP p-2">{{ tool }}</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
+</div>

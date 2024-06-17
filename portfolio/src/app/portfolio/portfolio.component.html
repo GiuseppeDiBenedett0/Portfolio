@@ -1,5 +1,14 @@
 <div class="container d-flex portfolio-content flex-column" @fadeIn>
   <div class="text-center justify-content-center">
-    <h1 class="portfolio-h1-content color-title">Il mio Portfolio</h1>
+    <h1 class="portfolio-h1-content color-title mt-2 mb-2">Il mio portfolio</h1>
+    <p class="color-title mb-5">Qui puoi trovare i miei lavori.</p>
+    <app-project-card [projects]="projects"></app-project-card>
+    <button
+      class="path-button"
+      mat-stroked-button
+      (click)="navigateToContact('Contact')"
+    >
+      Contattami
+    </button>
   </div>
 </div>

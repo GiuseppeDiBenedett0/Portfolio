@@ -5,38 +5,24 @@
 }
 
 .main-h1-content {
-  font-size: 2.5rem;
-  line-height: 1.6;
   margin: 0;
   text-transform: uppercase;
-}
-
-.main-p-content {
-  font-size: 1.5rem;
-  line-height: 1.6;
-}
-
-.path-about-button {
-  width: 290px;
-  height: 60px;
-  font-size: large;
-  transition: transform 0.3s ease;
 }
 
 .path-about-button:hover {
   transform: scale(1.1);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 769px) {
   .main-h1-content {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
   .main-p-content {
     font-size: 1rem;
   }
 
-  .path-about-button {
+  .path-button {
     width: 240px;
     height: 45px;
     font-size: medium;

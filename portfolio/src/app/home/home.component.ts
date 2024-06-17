@@ -1,18 +1,18 @@
 import { Component } from '@angular/core';
 import { fadeInAnimation } from '../page-animation';
 import { Router } from '@angular/router';
+import { NavigateService } from '../navigate.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
-  animations: [fadeInAnimation]
-  })
+  animations: [fadeInAnimation],
+})
 export class HomeComponent {
+  constructor(private navigateTo: NavigateService) {}
 
-  constructor(private router: Router) {}
-
-  navigateByButton(url: string){
-    this.router.navigate([url]);
+  navigateToAbout(url: string) {
+    this.navigateTo.navigate(url);
   }
 }

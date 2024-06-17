@@ -7,7 +7,7 @@ import {
 } from '@angular/animations';
 import { DOCUMENT } from '@angular/common';
 import { Component, Inject, OnInit, Renderer2 } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigateService } from '../navigate.service';
 
 const hidden = { transform: 'translatex(60%)' };
 const visible = { transform: 'translatex(0)' };
@@ -37,9 +37,9 @@ export class NavbarComponent implements OnInit {
   darkMode: boolean = true;
 
   constructor(
-    private router: Router,
+    private navigateTo: NavigateService,
     @Inject(DOCUMENT) private document: Document,
-    private renderer: Renderer2,
+    private renderer: Renderer2
   ) {}
 
   ngOnInit(): void {
@@ -51,13 +51,8 @@ export class NavbarComponent implements OnInit {
   }
 
   navigateByNav(url: string) {
-    this.router.navigate([url]);
+    this.navigateTo.navigate(url);
     this.link = url;
-  }
-
-  getCurrentLink(){
-    let currentLink  = this.router.url;
-    console.log(currentLink)
   }
 
   changeTheme(theme: string) {

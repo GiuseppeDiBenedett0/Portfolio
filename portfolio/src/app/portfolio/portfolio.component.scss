@@ -1,16 +1,17 @@
-.portfolio-content{
-    padding-top: 112px;
+.portfolio-content {
+  padding-top: 112px;
 }
 
-.portfolio-h1-content{
-    font-size: 2.5rem;
-    line-height: 1.6;
-    margin: 0;
-    text-transform: uppercase;
-    margin-bottom: 48px;
-    margin-top: 16px;
-  }
+.portfolio-h1-content {
+  text-transform: uppercase;
+}
 
-.card-img{
-    max-height: 300px;
+.card-img {
+  max-height: 300px;
+}
+
+@media (max-width: 769px) {
+  .portfolio-h1-content {
+    font-size: 3rem;
+  }
 }
