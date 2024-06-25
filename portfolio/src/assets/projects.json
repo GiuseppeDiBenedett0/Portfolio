@@ -14,21 +14,6 @@
         "GIT",
         "GITHUB"
       ]
-    },
-    {
-      "title": "IL MIO PORTFOLIO",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices, ante vitae tempus luctus, diam neque volutpat lorem, ut cursus justo dui ac tellus. Vivamus eu ultricies turpis, a porta quam. In eu felis neque. Etiam quis massa condimentum, mollis enim commodo, facilisis turpis. Proin nec viverra risus. In dapibus leo orci, sit amet varius tellus bibendum nec..",
-      "projectPreview": "assets/MioSito.png",
-      "tools": [
-        "HTML",
-        "CSS",
-        "TYPESCRIPT",
-        "BOOTSTRAP",
-        "ANGULAR",
-        "ANGULAR MATERIAL",
-        "GIT",
-        "GITHUB"
-      ]
     }
   ]
 }

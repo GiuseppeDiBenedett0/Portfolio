@@ -16,18 +16,6 @@ const visible = { transform: 'translatex(0)' };
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
-  animations: [
-    trigger('openClose', [
-      transition(':enter', [
-        style(hidden),
-        animate('1s ease-in', style(visible)),
-      ]),
-      transition(':leave', [
-        style(visible),
-        animate('1s ease-in', style(hidden)),
-      ]),
-    ]),
-  ],
 })
 export class NavbarComponent implements OnInit {
   navBar: boolean = false;
@@ -48,6 +36,14 @@ export class NavbarComponent implements OnInit {
 
   toggleNavBar() {
     this.navBar = !this.navBar;
+  }
+
+  closeNavBar() {
+    this.navBar = false;
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    if (navbarCollapse) {
+      this.renderer.removeClass(navbarCollapse, 'show');
+    }
   }
 
   navigateByNav(url: string) {

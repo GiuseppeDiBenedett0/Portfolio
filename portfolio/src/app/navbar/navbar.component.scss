@@ -7,16 +7,16 @@
   font-size: large;
 }
 
+.nav-toggler{
+  border-color: none;
+}
+
 .navbar-brand {
   display: flex;
 }
 
 .nav-link {
   cursor: pointer;
-}
-
-.change-theme-button {
-  padding: 8px;
 }
 
 @media (max-width: 991px) {

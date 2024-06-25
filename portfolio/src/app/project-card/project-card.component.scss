@@ -24,7 +24,7 @@
   padding-top: 8px;
 }
 
-.tools-group{
+.tools-list{
   padding: 0 !important;
 }
 
@@ -42,4 +42,30 @@
 
 ul {
   list-style: none;
+}
+
+@media(max-width: 991px) {
+  .tool {
+    font-size: small;
+  }
+}
+
+@media(max-width: 769px) {
+  .project-title{
+    font-size: 1.8rem;
+  }
+
+  .tools-name{
+    font-size: 1.6rem;
+  }
+}
+
+@media(max-width: 444px) {
+  .project-title{
+    font-size: 1.5rem;
+  }
+
+  .tools-name{
+    font-size: 1.3rem;
+  }
 }

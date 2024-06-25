@@ -1,16 +1,15 @@
-.main-home-content {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.main-h1-content {
-  margin: 0;
-  text-transform: uppercase;
+.main-home-content{
+  padding-top: 160px;
 }
 
 .path-about-button:hover {
   transform: scale(1.1);
+}
+
+@media (max-width: 991px) {
+  .main-home-content{
+    padding-top: 100px;
+  }
 }
 
 @media (max-width: 769px) {
@@ -26,5 +25,15 @@
     width: 240px;
     height: 45px;
     font-size: medium;
+  }
+}
+
+@media (max-width: 444px) {
+  .main-h1-content {
+    font-size: 2rem;
+  }
+
+  .main-home-content{
+    padding-top: 80px;
   }
 }

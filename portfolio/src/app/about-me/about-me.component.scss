@@ -9,8 +9,6 @@
 }
 
 .about-me-h2-content {
-  margin: 0;
-  text-transform: uppercase;
   margin-bottom: 80px;
 }
 
@@ -40,5 +38,15 @@
     width: 240px;
     height: 45px;
     font-size: medium;
+  }
+}
+
+@media (max-width: 444px) {
+  .about-me-h1-content {
+    font-size: 2rem;
+  }
+
+  .about-me-h2-content {
+    font-size: 1.5rem;
   }
 }

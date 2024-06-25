@@ -175,7 +175,7 @@ body {
   height: 100%;
 }
 
-.path-button{
+.main-button{
   width: 290px;
   height: 60px !important;
   font-size: large !important;
@@ -183,22 +183,28 @@ body {
   margin-top: 40px;
   margin-bottom: 40px;
 }
-.dark-theme .path-button{
+.dark-theme .main-button{
   background-color: map-get($md-mcgaccent, 500);
+  color: map-get($md-mcglight, 300) !important;
 }
 
-.light-theme .path-button{
+.light-theme .main-button{
   background-color: map-get($md-mcgaccent, 400);
+  color: map-get($md-mcgdark, 50) !important;
 }
 
 .dark-theme .color-title {
   color: map-get($md-mcglight, 300);
   font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 8px;
 }
 
 .light-theme .color-title {
   color: map-get($md-mcgdark, 400);
   font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 8px;
 }
 
 .dark-theme p {
@@ -252,11 +258,11 @@ section {
 }
 
 .dark-theme .nav-link {
-  color: map-get($md-mcglight, A400);
+  color: map-get($md-mcglight, 300);
 }
 
 .light-theme .nav-link {
-  color: map-get($md-mcgdark, 500);
+  color: map-get($md-mcgdark, 50);
 }
 
 .dark-theme .nav-link:hover {
@@ -368,6 +374,18 @@ section {
 
 .light-theme .tool{
   background-color: map-get($md-mcglight, 700 )
+}
+
+.dark-theme .form-content{
+  background-color: map-get($md-mcgdark, 400)
+}
+
+.dark-theme .contact-content{
+  background-color: map-get($md-mcgdark, 400 )
+}
+
+.light-theme .contact-content{
+  background-color: map-get($md-mcglight, 400 )
 }
 
 /* Importing Bootstrap SCSS file. */

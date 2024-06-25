@@ -5,6 +5,6 @@ export const fadeInAnimation = trigger ('fadeIn', [
         opacity: 0
     })),
     transition(':enter', [
-        animate('3s ease-in')
+        animate('2s ease-in')
     ])
 ]);

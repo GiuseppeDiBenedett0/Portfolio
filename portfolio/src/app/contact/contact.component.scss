@@ -1,0 +1,60 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contact-title {
+  margin-top: 140px;
+}
+
+.contact-content {
+  margin-top: 200px;
+  border-radius: 5px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.contact-logo{
+  width: 64px;
+  height: 64px;
+  transition: transform 0.3s ease;
+}
+
+.contact-logo:hover{
+  transform: scale(1.2);
+}
+
+@media(max-width: 991px){
+  .contact-content {
+    margin-top: 120px;
+  }
+}
+
+@media(max-width: 767px){
+  .color-title{
+    font-size: 3rem;
+  }
+
+  .contact-platforms-title{
+    font-size: 1.8rem;
+  }
+}
+
+
+@media(max-width: 444px){
+  .color-title{
+    font-size: 2rem;
+  }
+
+  .custom-link{
+    font-size: 1rem;
+  }
+
+  .contact-platforms-title{
+    font-size: 1.5rem;
+  }
+}
