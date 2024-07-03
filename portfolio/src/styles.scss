@@ -1,15 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 
-/* Importazione del file SCSS di Bootstrap. */
+//Importazione del file SCSS di Bootstrap.
 @use "@angular/material" as mat;
 @include mat.core();
 @import "bootstrap/scss/bootstrap";
 @import "./palette.scss";
 
-/* Aggiunta del font Montserrat da Google Fonts */
+//Aggiunta del font Montserrat da Google Fonts.
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap");
 
-/* Stile tipografico base per il font Montserrat */
+//Stile tipografico base per il font Montserrat.
 $montserrat-typography-level: mat.define-typography-level(
   $font-family: "Montserrat, sans-serif",
   $font-weight: 400,
@@ -18,7 +18,7 @@ $montserrat-typography-level: mat.define-typography-level(
   $letter-spacing: normal,
 );
 
-/* Definizione dei vari livelli tipografici con il font Montserrat */
+//Definizione dei vari livelli tipografici con il font Montserrat.
 $montserrat-typography-config: mat.define-typography-config(
   $headline-1:
     mat.define-typography-level(
@@ -118,15 +118,15 @@ $montserrat-typography-config: mat.define-typography-config(
     ),
 );
 
-/* Inclusione della gerarchia tipografica definita */
+//Inclusione della gerarchia tipografica definita.
 @include mat.typography-hierarchy($montserrat-typography-config);
 
-/* Applicazione della gerarchia tipografica al progetto */
+//Applicazione della gerarchia tipografica al progetto.
 body {
   @include mat.typography-hierarchy($montserrat-typography-config);
 }
 
-/* Stile per il tema scuro */
+//Stile per il tema scuro.
 .dark-theme {
   background-color: map-get($md-mcgdark, 500);
   background-image: url(../src/assets/dark-theme-squares.svg);
@@ -149,7 +149,7 @@ body {
   @include mat.all-component-colors($portfolio-dark-theme);
 }
 
-/* Stile per il tema chiaro */
+//Stile per il tema chiaro.
 .light-theme {
   background-color: map-get($md-mcglight, 200);
   background-image: url(../src/assets/light-theme-squares.svg);
@@ -173,14 +173,14 @@ body {
   @include mat.all-component-colors($portfolio-light-theme);
 }
 
-/* Stile generale per l'html e il body, con transizione per il cambio di tema */
+//Stile generale per l'html e il body, con transizione per il cambio di tema.
 html,
 body {
   height: 100%;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* Stile dei bottoni principali */
+//Stile dei bottoni principali.
 .main-button {
   width: 290px;
   height: 60px !important;
@@ -190,19 +190,18 @@ body {
   margin-bottom: 40px;
 }
 
-/* Stile dei bottoni principali nel tema scuro */
+//Colore dei bottoni principali.
 .dark-theme .main-button {
   background-color: map-get($md-mcgaccent, 500);
   color: map-get($md-mcglight, 300) !important;
 }
 
-/* Stile dei bottoni principali nel tema chiaro */
 .light-theme .main-button {
   background-color: map-get($md-mcgaccent, 400);
   color: map-get($md-mcgdark, 50) !important;
 }
 
-/* Stile dei titoli nel tema scuro */
+//Stile dei titoli.
 .dark-theme .color-title {
   color: map-get($md-mcglight, 300);
   font-weight: 900;
@@ -210,7 +209,6 @@ body {
   letter-spacing: 8px;
 }
 
-/* Stile dei titoli nel tema chiaro */
 .light-theme .color-title {
   color: map-get($md-mcgdark, 400);
   font-weight: 900;
@@ -218,23 +216,22 @@ body {
   letter-spacing: 8px;
 }
 
-/* Stile dei paragrafi nel tema scuro */
+//Stile dei paragrafi.
 .dark-theme p {
   color: map-get($md-mcglight, 600);
 }
 
-/* Stile dei paragrafi nel tema chiaro */
 .light-theme p {
   color: map-get($md-mcgdark, 300);
 }
 
-/* Stile per le icone Material */
+//Stile per le icone Material.
 .material-symbols-outlined {
   cursor: pointer;
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
 }
 
-/* Stile per le sezioni */
+//Stile per le sezioni.
 section {
   display: table;
 }
@@ -268,162 +265,147 @@ section {
   width: 120px;
 }
 
-/* Stile per i bottoni della navbar */
+//Stile per i bottoni della navbar.
 .nav-button {
   width: 144px;
   margin-bottom: 90px !important;
 }
 
-/* Stile dei link della navbar nel tema scuro */
+//Stile dei link della navbar.
 .dark-theme .nav-link {
   color: map-get($md-mcglight, 300);
 }
 
-/* Stile dei link della navbar nel tema chiaro */
 .light-theme .nav-link {
   color: map-get($md-mcgdark, 50);
 }
 
-/* Stile dei link della navbar quando sono hover nel tema scuro */
+//Stile dei link della navbar quando sono hover.
 .dark-theme .nav-link:hover {
   color: map-get($md-mcgaccent, A200);
 }
 
-/* Stile dei link della navbar quando sono hover nel tema chiaro */
 .light-theme .nav-link:hover {
   color: map-get($md-mcgaccent, A700);
 }
 
-/* Stile della navbar nel tema scuro */
+//Stile della navbar.
 .dark-theme .customNav {
   border-bottom: 1px solid map-get($md-mcgdark, 50);
 }
 
-/* Stile della navbar nel tema chiaro */
 .light-theme .customNav {
   border-bottom: 1px solid map-get($md-mcgdark, 500);
 }
 
-/* Stile del background della navbar nel tema scuro */
+//Stile del background della navbar.
 .dark-theme .bg-body-tertiary {
   background-color: map-get($md-mcgaccent, 500) !important;
 }
 
-/* Stile del background della navbar nel tema chiaro */
 .light-theme .bg-body-tertiary {
   background-color: map-get($md-mcgaccent, 400) !important;
 }
 
-/* Personalizzazione della scrollbar */
+//Personalizzazione della scrollbar.
 ::-webkit-scrollbar {
   width: 8px;
 }
 
-/* Stile del thumb della scrollbar */
 ::-webkit-scrollbar-thumb {
   border-radius: 5px;
 }
 
-/* Stile del thumb della scrollbar nel tema scuro */
 .dark-theme::-webkit-scrollbar-thumb {
   background: map-get($md-mcgdark, 50);
   border-radius: 5px;
 }
 
-/* Stile del thumb della scrollbar nel tema chiaro */
 .light-theme::-webkit-scrollbar-thumb {
   background: map-get($md-mcgdark, 400);
   border-radius: 5px;
 }
 
-/* Stile delle card */
+//Impostazione dell margine delle card.
 .card {
   margin: 16px;
 }
 
-/* Stile del titolo delle card */
+//Stile del titolo delle card.
 .card-title {
   font-size: 1.3rem !important;
   line-height: 1.6 !important;
 }
 
-/* Stile delle card nel tema scuro */
+//Stile delle card.
 .dark-theme .card {
   background-color: transparent;
   border: 1px solid map-get($md-mcgdark, 50);
 }
 
-/* Stile delle card nel tema chiaro */
 .light-theme .card {
   background-color: transparent;
   border: 1px solid map-get($md-mcgdark, 500);
 }
 
-/* Stile della sezione del titolo delle card nel tema scuro */
+//Stile della sezione del titolo delle card.
 .dark-theme .card-title-section {
   border-bottom: 1px solid map-get($md-mcgdark, 50);
 }
 
-/* Stile della sezione del titolo delle card nel tema chiaro */
 .light-theme .card-title-section {
   border-bottom: 1px solid map-get($md-mcgdark, 500);
 }
 
-/* Stile del titolo delle card nel tema scuro */
+//Stile del titolo delle card.
 .dark-theme .card-title {
   color: map-get($md-mcglight, 50);
   font-weight: 600;
 }
 
-/* Stile del titolo delle card nel tema chiaro */
 .light-theme .card-title {
   color: map-get($md-mcgdark, 900);
   font-weight: 600;
 }
 
-/* Stile della lista delle competenze nel tema scuro */
+//Stile della lista delle competenze.
 .dark-theme .skill-list {
   color: map-get($md-mcglight, 50);
 }
 
-/* Stile della lista delle competenze nel tema chiaro */
 .light-theme .skill-list {
   color: map-get($md-mcgdark, 900);
 }
 
-/* Stile del corpo delle card delle competenze nel tema scuro */
+//Stile del corpo delle card delle competenze.
 .dark-theme .skill-card-body {
   width: 100%;
   height: 100%;
   background-color: map-get($md-mcgdark, 400);
 }
 
-/* Stile del corpo delle card delle competenze nel tema chiaro */
 .light-theme .skill-card-body {
   width: 100%;
   height: 100%;
   background-color: map-get($md-mcglight, 300);
 }
 
-/* Stile dei campi delle competenze nel portfolio nel tema scuro */
+//Stile dei campi delle competenze nel portfolio.
 .dark-theme .tool {
   background-color: map-get($md-mcgdark, 400);
 }
 
-/* Stile dei campi delle competenze nel portfolio nel tema chiaro */
 .light-theme .tool {
   background-color: map-get($md-mcglight, 700);
 }
 
-/* Stile del contenitore del campo contatti nel tema scuro */
+//Stile del contenitore del campo contatti.
 .dark-theme .contact-content {
   background-color: map-get($md-mcgdark, 400);
 }
 
-/* Stile del contenitore del campo contatti nel tema chiaro */
 .light-theme .contact-content {
   background-color: map-get($md-mcglight, 400);
 }
 
-/* Importazione del file SCSS di Bootstrap (di nuovo, se necessario). */
 @import "bootstrap/scss/bootstrap";
