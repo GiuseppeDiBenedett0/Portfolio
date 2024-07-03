@@ -1,3 +1,4 @@
+//Stile per l'host del componente, con display flessibile e allineamento a sinistra
 :host {
   display: flex;
   flex-direction: column;
@@ -18,43 +19,73 @@ a {
   text-decoration: none;
 }
 
-.contact-logo{
+//Animazione per aggiungere un bordo sotto i link personalizzati.
+a.custom-link {
+  color: inherit;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+
+//Stile per il bordo animato sotto i link
+a.custom-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background-color: currentColor;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+//Effetto hover per i link personalizzati
+a.custom-link:hover::after {
+  width: 100%;
+  left: 0;
+  background-color: currentColor;
+}
+
+.contact-logo {
   width: 64px;
   height: 64px;
   transition: transform 0.3s ease;
 }
 
-.contact-logo:hover{
+.contact-logo:hover {
   transform: scale(1.2);
 }
 
-@media(max-width: 991px){
+//Media query per ridurre la grandezza dei testi e il margine superiore della pagina su schermi più piccoli
+@media (max-width: 991px) {
   .contact-content {
     margin-top: 120px;
   }
 }
 
-@media(max-width: 767px){
-  .color-title{
+//Media query per ridurre la grandezza dei titoli su schermi di medie dimensioni
+@media (max-width: 767px) {
+  .color-title {
     font-size: 3rem;
   }
 
-  .contact-platforms-title{
+  .contact-platforms-title {
     font-size: 1.8rem;
   }
 }
 
-
-@media(max-width: 444px){
-  .color-title{
+//Media query per ridurre ulteriormente la grandezza dei titoli su schermi molto piccoli
+@media (max-width: 444px) {
+  .color-title {
     font-size: 2rem;
   }
 
-  .custom-link{
+  .custom-link {
     font-size: 1rem;
   }
 
-  .contact-platforms-title{
+  .contact-platforms-title {
     font-size: 1.5rem;
   }
 }

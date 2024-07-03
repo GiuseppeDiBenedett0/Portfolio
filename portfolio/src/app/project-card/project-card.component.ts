@@ -6,6 +6,8 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./project-card.component.scss'],
 })
 export class ProjectCardComponent {
+
+  //Proprietà per ricevere i dati dei progetti dal componente genitore.
   @Input() projects: {
     title: string;
     description: string;

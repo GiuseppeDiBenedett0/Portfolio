@@ -10,6 +10,8 @@ import { NavigateService } from '../navigate.service';
   animations: [fadeInAnimation],
 })
 export class AboutMeComponent implements OnInit {
+  
+  //Array per memorizzare i campi delle varie skill.
   frontEndSkills: { name: string; logo: string }[] = [];
   backEndSkills: { name: string; logo: string }[] = [];
   frameworkSkills: { name: string; logo: string }[] = [];
@@ -17,6 +19,7 @@ export class AboutMeComponent implements OnInit {
 
   constructor(private http: HttpClient, private navigateTo: NavigateService) {}
 
+  //Inizializzazione del componente e caricamento dei dati delle skill dal file JSON.
   ngOnInit() {
     this.http.get<any>('assets/skill-list.json').subscribe((data) => {
       this.frontEndSkills = data.frontEndSkills;
@@ -26,6 +29,7 @@ export class AboutMeComponent implements OnInit {
     });
   }
 
+  //Funzione per navigare verso la sezione portfolio del sito.
   navigateToPortfolio(url: string) {
     this.navigateTo.navigate(url);
   }

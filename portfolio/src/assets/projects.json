@@ -2,7 +2,7 @@
   "projects": [
     {
       "title": "IL MIO PORTFOLIO",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices, ante vitae tempus luctus, diam neque volutpat lorem, ut cursus justo dui ac tellus. Vivamus eu ultricies turpis, a porta quam. In eu felis neque. Etiam quis massa condimentum, mollis enim commodo, facilisis turpis. Proin nec viverra risus. In dapibus leo orci, sit amet varius tellus bibendum nec..",
+      "description": "Il progetto 'IL MIO PORTFOLIO' rappresenta un sito web personalizzato creato per mostrare le mie competenze, esperienze e progetti. Il design è stato sviluppato con un focus sull'eleganza e la facilità d'uso, utilizzando Angular, HTML, CSS e TypeScript. L'interfaccia è stata resa responsiva grazie all'integrazione di Bootstrap e Angular Material, garantendo una visualizzazione ottimale su dispositivi di diverse dimensioni.",
       "projectPreview": "assets/MioSito.png",
       "tools": [
         "HTML",

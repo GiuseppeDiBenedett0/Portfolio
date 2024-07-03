@@ -5,22 +5,20 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-6 d-flex justify-content-center">
+    <div class="col-lg-6 d-flex justify-content-center">
       <div class="card text-bg-dark">
         <div class="image-container">
-          <img [src]="project.projectPreview" class="card-img" />
+          <img [src]="project.projectPreview" class="card-img img-fluid" />
         </div>
       </div>
     </div>
-    <div class="tool-list mb-5 col-md-6 d-flex flex-column text-start">
+    <div class="tool-list mb-5 col-lg-6 d-flex flex-column text-start">
       <p class="p-project text-center">{{ project.description }}</p>
       <div class="container mt-4 p-0">
         <div class="row">
           <h3 class="tools-name text-center color-title">Strumenti utilizzati</h3>
           <div class="col-6 col-sm-4 mb-3" *ngFor="let tool of project.tools">
-            <div
-              class="tool d-flex justify-content-center align-items-center mb-3"
-            >
+            <div class="tool d-flex justify-content-center align-items-center mb-3">
               <p class="toolsP p-2">{{ tool }}</p>
             </div>
           </div>

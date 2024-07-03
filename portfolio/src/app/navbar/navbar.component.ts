@@ -1,16 +1,6 @@
-import {
-  animate,
-  transition,
-  trigger,
-  state,
-  style,
-} from '@angular/animations';
 import { DOCUMENT } from '@angular/common';
 import { Component, Inject, OnInit, Renderer2 } from '@angular/core';
 import { NavigateService } from '../navigate.service';
-
-const hidden = { transform: 'translatex(60%)' };
-const visible = { transform: 'translatex(0)' };
 
 @Component({
   selector: 'app-navbar',
@@ -18,6 +8,7 @@ const visible = { transform: 'translatex(0)' };
   styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent implements OnInit {
+
   navBar: boolean = false;
   link!: string;
 
@@ -25,19 +16,22 @@ export class NavbarComponent implements OnInit {
   darkMode: boolean = true;
 
   constructor(
-    private navigateTo: NavigateService,
+    private navigateTo: NavigateService, // Servizio per la navigazione
     @Inject(DOCUMENT) private document: Document,
     private renderer: Renderer2
   ) {}
 
+  //Inizializza il sito con il tema scuro.
   ngOnInit(): void {
     this.renderer.addClass(this.document.body, 'dark-theme');
   }
 
+  //Alterna lo stato di visibilità della navbar.
   toggleNavBar() {
     this.navBar = !this.navBar;
   }
 
+  //Chiude la navbar quando un link viene cliccato.
   closeNavBar() {
     this.navBar = false;
     const navbarCollapse = document.querySelector('.navbar-collapse');
@@ -46,11 +40,13 @@ export class NavbarComponent implements OnInit {
     }
   }
 
+  //Naviga tra le pagine tramite i link presenti sulla navbar.
   navigateByNav(url: string) {
     this.navigateTo.navigate(url);
     this.link = url;
   }
 
+  //Cambia il tema del sito tra chiaro e scuro.
   changeTheme(theme: string) {
     this.renderer.removeClass(this.document.body, 'light-theme');
     this.renderer.removeClass(this.document.body, 'dark-theme');

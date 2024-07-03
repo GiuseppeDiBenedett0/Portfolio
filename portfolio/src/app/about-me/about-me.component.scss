@@ -21,6 +21,7 @@
   transform: scale(1.1);
 }
 
+//Media query per ridurre la dimensione del testo e del pulsante su schermi piccoli.
 @media (max-width: 769px) {
   .about-me-h1-content {
     font-size: 3rem;
@@ -41,6 +42,7 @@
   }
 }
 
+//Media query per ridurre ulteriormente la dimensione del testo su schermi molto piccoli.
 @media (max-width: 444px) {
   .about-me-h1-content {
     font-size: 2rem;

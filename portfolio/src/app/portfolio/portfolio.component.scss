@@ -6,6 +6,7 @@
   max-height: 300px;
 }
 
+//Media query per ridurre la dimensione del testo del titolo su schermi più piccoli.
 @media (max-width: 769px) {
   .portfolio-h1-content {
     font-size: 3rem;

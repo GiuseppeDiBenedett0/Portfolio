@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { fadeInAnimation } from '../page-animation';
-import { Router } from '@angular/router';
 import { NavigateService } from '../navigate.service';
 
 @Component({
@@ -10,8 +9,10 @@ import { NavigateService } from '../navigate.service';
   animations: [fadeInAnimation],
 })
 export class HomeComponent {
+
   constructor(private navigateTo: NavigateService) {}
 
+  //Funzione che serve per navigare verso la pagina "Aboute-me".
   navigateToAbout(url: string) {
     this.navigateTo.navigate(url);
   }

@@ -19,6 +19,7 @@
   cursor: pointer;
 }
 
+//Media query che aggiunge un bordo superiore agli elementi della navbar, un padding e toglie i bordi ai link durante l'hover.
 @media (max-width: 991px) {
   .nav-item {
     border-top: 1px solid;
