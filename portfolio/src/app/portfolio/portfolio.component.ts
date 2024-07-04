@@ -17,6 +17,10 @@ export class PortfolioComponent implements OnInit {
     description: string;
     projectPreview: string;
     tools: string[];
+    sourceBoolean: boolean;
+    source: string;
+    linkBoolean: boolean;
+    link: string;
   }[] = [];
 
   constructor(private http: HttpClient, private navigateTo: NavigateService) {}

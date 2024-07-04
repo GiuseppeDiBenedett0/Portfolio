@@ -16,11 +16,23 @@
       <p class="p-project text-center">{{ project.description }}</p>
       <div class="container mt-4 p-0">
         <div class="row">
-          <h3 class="tools-name text-center color-title">Strumenti utilizzati</h3>
+          <h3 class="tools-name text-center color-title">
+            Strumenti utilizzati
+          </h3>
           <div class="col-6 col-sm-4 mb-3" *ngFor="let tool of project.tools">
-            <div class="tool d-flex justify-content-center align-items-center mb-3">
+            <div
+              class="tool d-flex justify-content-center align-items-center mb-3"
+            >
               <p class="toolsP p-2">{{ tool }}</p>
             </div>
+          </div>
+          <div class="d-flex justify-content-between">
+            <a *ngIf="project.sourceBoolean" [href]="project.source" target="_blank">
+              <button class="secondary-button pe-2" mat-stroked-button>Vai al codice<span class="material-icons pe-2">code</span></button>
+            </a>
+            <a *ngIf="project.linkBoolean" [href]="project.link" target="_blank">
+              <button class="secondary-button pe-2" mat-stroked-button>Vai al link<span class="material-icons pe-2">link</span></button>
+            </a>
           </div>
         </div>
       </div>

@@ -13,5 +13,9 @@ export class ProjectCardComponent {
     description: string;
     projectPreview: string;
     tools: string[];
+    sourceBoolean: boolean;
+    source: string;
+    linkBoolean: boolean;
+    link: string;
   }[] = [];
 }

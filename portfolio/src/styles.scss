@@ -201,6 +201,17 @@ body {
   color: map-get($md-mcgdark, 50) !important;
 }
 
+//Colore dei bottoni secondari.
+.dark-theme .secondary-button {
+  background-color: map-get($md-mcgaccent, 900);
+  color: map-get($md-mcglight, 300) !important;
+}
+
+.light-theme .secondary-button {
+  background-color: map-get($md-mcgaccent, 300);
+  color: map-get($md-mcgdark, 50) !important;
+}
+
 //Stile dei titoli.
 .dark-theme .color-title {
   color: map-get($md-mcglight, 300);
