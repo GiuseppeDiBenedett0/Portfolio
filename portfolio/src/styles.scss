@@ -67,7 +67,7 @@ $montserrat-typography-config: mat.define-typography-config(
     ),
   $subtitle-1:
     mat.define-typography-level(
-      2.0rem,
+      2rem,
       1.6,
       400,
       $font-family: "Montserrat, sans-serif"
@@ -154,7 +154,7 @@ body {
   background-color: map-get($md-mcglight, 200);
   background-image: url(../src/assets/light-theme-squares.svg);
   background-attachment: fixed;
-  
+
   $light-theme-basic: mat.define-palette($md-mcgdark, A100);
   $light-theme-primary: mat.define-palette($md-mcgdark);
   $light-theme-accent: mat.define-palette($md-mcgaccent);
@@ -280,6 +280,15 @@ section {
 .nav-button {
   width: 144px;
   margin-bottom: 90px !important;
+}
+
+//Colori per il bottone dell'hamburger menu in base al tema.
+.dark-theme .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(37, 193, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.light-theme .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(0, 154, 216, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 //Stile dei link della navbar.
