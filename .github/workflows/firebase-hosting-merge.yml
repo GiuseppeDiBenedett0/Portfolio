@@ -20,16 +20,11 @@ jobs:
           npm run build
 
       - name: Deploy to Firebase Hosting
-        uses: FirebaseExtended/action-hosting-deploy@v0
-        with:
-          repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_GIUSEPPE_DI_BENEDETTO_PORT }}
-          channelId: live
-          projectId: giuseppe-di-benedetto-port
+        run: |
+          cd portfolio
+          firebase deploy --only hosting --token ${{ secrets.FIREBASE_AUTH_TOKEN }}
         env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_AUTH_TOKEN }}
-        # `working-directory` cannot be used with `uses`, so `cd` commands are handled manually
-        # Ensure `firebase.json` is in the `portfolio` directory if needed, or adjust accordingly
+          FIREBASE_AUTH_TOKEN: ${{ secrets.FIREBASE_AUTH_TOKEN }}
 
 
           
