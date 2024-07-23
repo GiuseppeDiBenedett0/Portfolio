@@ -11,8 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - run: ls -la
+      - run: ls -la Portfolio
+      - run: ls -la Portfolio/portfolio
+      - run: cat Portfolio/portfolio/package.json
       - run: npm ci && npm run build
-        working-directory: Portfolio/portfolio/
+        working-directory: Portfolio/portfolio # Imposta la working-directory
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
