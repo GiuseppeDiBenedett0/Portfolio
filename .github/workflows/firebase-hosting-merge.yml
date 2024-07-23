@@ -19,12 +19,17 @@ jobs:
           npm ci
           npm run build
 
+      - name: Install Firebase CLI
+        run: |
+          npm install -g firebase-tools
+
       - name: Deploy to Firebase Hosting
         run: |
           cd portfolio
           firebase deploy --only hosting --token ${{ secrets.FIREBASE_AUTH_TOKEN }}
         env:
           FIREBASE_AUTH_TOKEN: ${{ secrets.FIREBASE_AUTH_TOKEN }}
+
 
 
           
