@@ -10,16 +10,18 @@ jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - run: ls -la
-      - run: ls -la Portfolio
-      - run: ls -la Portfolio/portfolio
-      - run: cat Portfolio/portfolio/package.json
-      - run: npm ci && npm run build
-        working-directory: Portfolio/portfolio # Imposta la working-directory
-      - uses: FirebaseExtended/action-hosting-deploy@v0
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install dependencies and build
+        run: npm ci && npm run build
+        working-directory: portfolio
+
+      - name: Deploy to Firebase Hosting
+        uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_GIUSEPPE_DI_BENEDETTO_PORT }}
           channelId: live
           projectId: giuseppe-di-benedetto-port
+
