@@ -15,6 +15,7 @@
     "frameworkSkills": [
       { "name": "Bootstrap", "logo": "assets/Bootstrap_logo.svg.png" },
       { "name": "Angular", "logo": "assets/Angular_full_color_logo.svg.png" },
+      { "name": "React", "logo": "assets/react-2.svg" },
       { "name": "Angular Material", "logo": "assets/material.png" }
     ],
     "toolsSkills": [
