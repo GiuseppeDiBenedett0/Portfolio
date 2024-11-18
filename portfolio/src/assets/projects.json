@@ -25,15 +25,15 @@
       "projectPreview": "assets/RistoranteDeFrancisci.png",
       "tools": [
         "HTML",
-        "STYLED COMPONENTS",
         "JAVASCRIPT",
-        "BOOTSTRAP",
         "REACT",
         "VITE",
         "NODE.JS",
         "MYSQL",
         "GIT",
-        "GITHUB"
+        "GITHUB",
+        "BOOTSTRAP",
+        "STYLED COMPONENTS"
       ],
       "sourceBoolean": true,
       "source": "https://github.com/GiuseppeDiBenedett0/Ristorante-De-Franx",
