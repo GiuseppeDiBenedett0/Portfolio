@@ -25,11 +25,13 @@
       "projectPreview": "assets/RistoranteDeFrancisci.png",
       "tools": [
         "HTML",
-        "CSS",
+        "STYLED COMPONENTS",
         "JAVASCRIPT",
         "BOOTSTRAP",
         "REACT",
         "VITE",
+        "NODE.JS",
+        "MYSQL",
         "GIT",
         "GITHUB"
       ],
