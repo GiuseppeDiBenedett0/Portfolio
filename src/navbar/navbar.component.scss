@@ -1,0 +1,53 @@
+.nav-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    background-color: #0c343d !important;
+  }
+  
+  .nav-brand-container {
+    padding-left: 20px;
+  }
+  
+  .nav-brand-img {
+    width: 48px;
+  }
+  
+  .menu-icon {
+    padding-right: 20px;
+    cursor: pointer;
+    width: 53px;
+    height: 33px;
+  }
+  
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    padding-right: 40px;
+  
+    @media (max-width: 991px) {
+      display: none;
+    }
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    padding: 0 16px 0 16px;
+  }
+  
+  .nav-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .nav-theme-icon {
+    padding-left: 16px;
+  }
+  
+  .nav-icon-language {
+    cursor: pointer;
+    padding: 0 0 2px 16px;
+  }
+  
