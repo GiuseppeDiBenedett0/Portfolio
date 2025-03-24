@@ -1,5 +1,12 @@
-import { Component, OnInit, Output, signal, EventEmitter, inject } from '@angular/core';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import {
+  Component,
+  OnInit,
+  Output,
+  signal,
+  EventEmitter,
+  inject,
+} from '@angular/core';
+import { BreakpointObserver } from '@angular/cdk/layout';
 import { ThemeService } from '../services/theme.service';
 
 @Component({
@@ -18,12 +25,15 @@ export class NavbarComponent implements OnInit {
   currentLanguage: string = 'IT';
   private readonly maxWidthQuery = '(max-width: 991px)';
 
+  //Emette l'evento quando la lingua cambia.
   @Output() languageChange = new EventEmitter<string>();
 
+  //Inietta il servizio per la gestione del tema.
   readonly themeService = inject(ThemeService);
 
   constructor(private breakpointObserver: BreakpointObserver) {}
 
+  //Osserva le modifiche del breakpoint maxWidthQuery.
   ngOnInit(): void {
     this.breakpointObserver
       .observe([this.maxWidthQuery])
@@ -36,6 +46,7 @@ export class NavbarComponent implements OnInit {
       });
   }
 
+  //Cambia la lingua e aggiorna i link di navigazione.
   changeLanguage(language: string) {
     if (language === 'IT') {
       this.navLinks = this.navIt();

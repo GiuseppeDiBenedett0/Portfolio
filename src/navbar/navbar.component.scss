@@ -3,7 +3,6 @@
     align-items: center;
     justify-content: space-between;
     padding: 8px;
-    background-color: #0c343d !important;
   }
   
   .nav-brand-container {
@@ -15,15 +14,21 @@
   }
   
   .menu-icon {
-    padding-right: 20px;
     cursor: pointer;
+    padding-right: 20px;
     width: 53px;
     height: 33px;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .menu-icon:hover {
+    opacity: 0.7;
   }
   
   .nav-links {
     display: flex;
     flex-direction: row;
+    align-items: center;
     padding-right: 40px;
   
     @media (max-width: 991px) {
@@ -43,11 +48,12 @@
   }
   
   .nav-theme-icon {
-    padding-left: 16px;
+    padding: 0 0 3px 16px;
+    width: 30px;
   }
-  
+
   .nav-icon-language {
-    cursor: pointer;
-    padding: 0 0 2px 16px;
+    padding: 1px 0 0px 16px;
+    width: 23px;
   }
   

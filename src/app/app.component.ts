@@ -1,5 +1,9 @@
-import { Component, inject } from '@angular/core';
-import { Theme, ThemeService } from '../services/theme.service';
+import { Component } from '@angular/core';
+
+interface Food {
+  value: string;
+  viewValue: string;
+}
 
 @Component({
   selector: 'app-root',

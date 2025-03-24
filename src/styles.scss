@@ -1,4 +1,5 @@
 @use "@angular/material" as mat;
+@use "./src_theme-colors.scss" as theme;
 
 html,
 body {
@@ -9,24 +10,66 @@ body {
   font-family: Montserrat, "Helvetica Neue", sans-serif;
 }
 
+//Tema scuro.
 html {
   color-scheme: dark;
   @include mat.theme(
     (
-      color: mat.$violet-palette,
-      typography: Montserrat,
+      color: (
+        primary: theme.$primary-palette,
+        tertiary: theme.$tertiary-palette,
+      ),
       density: 0,
     )
   );
+
+  //Modifiche navbar.
+  .nav-body {
+    background-color: #0c343d;
+  }
+
+  .nav-link {
+    color: #ffffff;
+  }
 }
 
+//Tema chiaro.
 html.light-mode {
   color-scheme: light;
   @include mat.theme(
     (
-      color: mat.$azure-palette,
-      typography: Roboto,
+      color: (
+        primary: theme.$primary-palette,
+        tertiary: theme.$tertiary-palette,
+      ),
       density: 0,
     )
   );
+
+  //Modifiche navbar.
+  .nav-body {
+    background-color: #007994;
+  }
+
+  .nav-link {
+    color: #000000;
+  }
+}
+
+.nav-theme-icon {
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.nav-theme-icon:hover {
+  transform: scale(1.2);
+}
+
+.nav-icon-language {
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.nav-icon-language:hover {
+  transform: scale(1.2);
 }

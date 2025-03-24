@@ -16,11 +16,13 @@ export class NavMenuComponent {
 
   readonly themeService = inject(ThemeService);
 
+  //Chiude il menu e emette l'evento per aggiornare lo stato.
   closeMenu() {
     this.showMenuInput = !this.showMenuInput;
     this.showMenuOutput.emit(this.showMenuInput);
   }
 
+  //Emette l'evento di cambio lingua.
   changeLanguage(language: string) {
     this.languageChange.emit(language);
   }

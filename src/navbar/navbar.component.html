@@ -1,40 +1,48 @@
 <div class="nav-body">
-    <div class="nav-brand-container">
-      <img  class="nav-brand-img" src="/Logo.svg" alt="Logo" />
-    </div>
-    <div class="nav-links">
-      <a class="nav-link" href="" *ngFor="let link of navLinks">{{ link }}</a>
-      <div class="nav-icon-container">
-        <img (click)="themeService.toggleTheme()" class="nav-theme-icon" src="/entypo_light-up.svg" alt="Light Mode" />
-        <a *ngIf="currentLanguage !== 'IT'"
-          ><img
-            (click)="changeLanguage('IT')"
-            class="nav-icon-language"
-            src="/circle-flags_it.svg"
-            alt="IT"
-        /></a>
-        <a *ngIf="currentLanguage !== 'EN'"
-          ><img
-            (click)="changeLanguage('EN')"
-            class="nav-icon-language"
-            src="/circle-flags_lang-en.svg"
-            alt="ENG"
-        /></a>
-      </div>
-    </div>
-    <img
-      *ngIf="showMenuIcon"
-      (click)="showMobileMenu()"
-      class="menu-icon"
-      src="/menu_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg"
-      alt="Icon"
-    />
+  <div class="nav-brand-container">
+    <img class="nav-brand-img" src="/Logo.svg" alt="Logo" />
   </div>
-  <app-nav-menu
-    [navLinks]="navLinks"
-    [currentLanguage]="currentLanguage"
-    [showMenuInput]="showMenu"
-    (showMenuOutput)="updateMenu($event)"
-    (languageChange)="changeLanguage($event)"
+  <div class="nav-links">
+    <a class="nav-link" href="" *ngFor="let link of navLinks">{{ link }}</a>
+    <div class="nav-icon-container">
+      <img
+        (click)="themeService.toggleTheme()"
+        class="nav-theme-icon"
+        src="/entypo_light-up.svg"
+        alt="Light Mode"
+      />
+      <a *ngIf="currentLanguage !== 'IT'"
+        ><img
+          (click)="changeLanguage('IT')"
+          class="nav-icon-language"
+          src="/circle-flags_it.svg"
+          alt="IT"
+      /></a>
+      <a *ngIf="currentLanguage !== 'EN'"
+        ><img
+          (click)="changeLanguage('EN')"
+          class="nav-icon-language"
+          src="/circle-flags_lang-en.svg"
+          alt="ENG"
+      /></a>
+    </div>
+  </div>
+  <img
+    *ngIf="showMenuIcon"
+    (click)="showMobileMenu()"
+    class="menu-icon"
+    [src]="
+      themeService.currentTheme() === 'dark'
+        ? '/menu_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg'
+        : '/menu_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg'
+    "
+    alt="Icon"
   />
-  
+</div>
+<app-nav-menu
+  [navLinks]="navLinks"
+  [currentLanguage]="currentLanguage"
+  [showMenuInput]="showMenu"
+  (showMenuOutput)="updateMenu($event)"
+  (languageChange)="changeLanguage($event)"
+/>
