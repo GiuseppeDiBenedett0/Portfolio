@@ -1,0 +1,9 @@
+{
+  "Navbar": [
+    { "link": "Home" },
+    { "link": "About" },
+    { "link": "Skills" },
+    { "link": "Portfolio" },
+    { "link": "Contatti" }
+  ]
+}

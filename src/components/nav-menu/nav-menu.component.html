@@ -7,19 +7,16 @@
         src="/entypo_light-up.svg"
         alt="Light Mode"
       />
-      <a *ngIf="currentLanguage !== 'IT'"
+      <a
         ><img
-          (click)="changeLanguage('IT')"
+          (click)="languageService.toggleLanguage()"
           class="nav-icon-language"
-          src="/circle-flags_it.svg"
+          [src]="
+            languageService.currentLanguage() === 'IT'
+              ? '/circle-flags_it.svg'
+              : '/circle-flags_lang-en.svg'
+          "
           alt="IT"
-      /></a>
-      <a *ngIf="currentLanguage !== 'EN'"
-        ><img
-          (click)="changeLanguage('EN')"
-          class="nav-icon-language"
-          src="/circle-flags_lang-en.svg"
-          alt="ENG"
       /></a>
     </div>
     <span class="close-icon" (click)="closeMenu()"
@@ -31,7 +28,7 @@
   </div>
   <div class="menu-container">
     <div class="nav-links">
-      <a class="nav-link" href="" *ngFor="let link of navLinks">{{ link }}</a>
+      <a class="nav-link" href="" *ngFor="let link of navLinks">{{ link.link }}</a>
     </div>
   </div>
 </div>

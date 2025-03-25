@@ -1,5 +1,6 @@
 import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
 import { ThemeService } from '../../services/theme.service';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-nav-menu',
@@ -10,20 +11,15 @@ import { ThemeService } from '../../services/theme.service';
 export class NavMenuComponent {
   @Input() showMenuInput: boolean = false;
   @Output() showMenuOutput = new EventEmitter<boolean>();
-  @Input() navLinks: string[] = [];
-  @Input() currentLanguage: string = '';
-  @Output() languageChange = new EventEmitter<string>();
+  @Input() navLinks: any[] = [];
 
   readonly themeService = inject(ThemeService);
+
+  readonly languageService = inject(LanguageService);
 
   //Chiude il menu e emette l'evento per aggiornare lo stato.
   closeMenu() {
     this.showMenuInput = !this.showMenuInput;
     this.showMenuOutput.emit(this.showMenuInput);
-  }
-
-  //Emette l'evento di cambio lingua.
-  changeLanguage(language: string) {
-    this.languageChange.emit(language);
   }
 }

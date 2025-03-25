@@ -1,0 +1,46 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.text-container {
+  text-align: start;
+}
+
+.first-title {
+  font-size: 36px;
+  margin: 16px 0 16px 0;
+}
+
+.second-title {
+  font-size: 48px;
+  margin: 16px 0 16px 0;
+}
+
+.third-title {
+  font-size: 48px;
+  margin: 16px 0 16px 0;
+}
+
+.forth-title {
+  font-size: 36px;
+  margin: 16px 0 16px 0;
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: row;
+  width: 300px;
+}
+
+.social-icon {
+  cursor: pointer;
+  padding-right: 16px;
+  transition: 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+    transform: scale(1.3);
+}

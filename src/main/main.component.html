@@ -1,0 +1,38 @@
+<div class="wrapper">
+  <div class="text-container">
+    <h1 class="first-title">Ciao, Sono</h1>
+    <h1 class="second-title">Giuseppe Di Benedetto</h1>
+    <h1 class="third-title">Full Stack Developer</h1>
+    <h1 class="forth-title">Residente a Cagliari</h1>
+    <div class="icon-container">
+      <img
+        class="social-icon"
+        [src]="
+          themeService.currentTheme() === 'dark'
+            ? '/github-dark.svg'
+            : '/github-light.svg'
+        "
+        alt="Icon"
+      />
+      <img
+        class="social-icon"
+        [src]="
+          themeService.currentTheme() === 'dark'
+            ? '/mdi_linkedin-dark.svg'
+            : '/mdi_linkedin-light.svg'
+        "
+        alt="Icon"
+      />
+    </div>
+  </div>
+  <div class="img-container">
+    <img
+      [src]="
+        themeService.currentTheme() === 'dark'
+          ? '/my-image-dark.png'
+          : '/my-image-light.png'
+      "
+      alt="Icon"
+    />
+  </div>
+</div>
