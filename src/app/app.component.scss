@@ -4,6 +4,9 @@
 }
 
 .hide-content {
-  opacity: 0;
-  pointer-events: none;
+  display: none;
+}
+
+.show-content {
+  display: initial;
 }

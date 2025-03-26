@@ -2,17 +2,17 @@ import { DOCUMENT } from '@angular/common';
 import { inject, Injectable, signal } from '@angular/core';
 
 //Definisce il tema.
-export type Theme = 'dark' | 'light'; 
+export type Theme = 'dark' | 'light';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ThemeService {
   private readonly document = inject(DOCUMENT); //Inietta il document del browser.
-  public readonly currentTheme = signal<Theme>('dark'); //Crea un segnale per il tema corrente.
+  public readonly currentTheme = signal<Theme | null>('dark'); //Crea un segnale per il tema corrente.
 
   constructor() {
-    this.setTheme(this.getThemeFromLocalStorage()); //Imposta il tema iniziale dal localStorage.
+    this.initTheme();
   }
 
   //Inverte il tema.
@@ -26,7 +26,6 @@ export class ThemeService {
 
   //Imposta il tema corrente, aggiorna la classe del documentElement e salva nel localStorage.
   setTheme(theme: Theme) {
-    
     this.currentTheme.set(theme);
     if (theme === 'dark') {
       this.document.documentElement.classList.remove('light-mode');
@@ -37,17 +36,28 @@ export class ThemeService {
   }
 
   //Recupera il tema dal localStorage o restituisce 'dark' come predefinito.
-  getThemeFromLocalStorage(): Theme {
+  getThemeFromLocalStorage(): Theme | null {
     if (typeof window !== 'undefined' && window.localStorage) {
-      return (localStorage.getItem('theme') as Theme) ?? 'dark';
+      const storedTheme = localStorage.getItem('theme');
+      return storedTheme === 'dark' || storedTheme === 'light'
+        ? storedTheme
+        : null;
     }
-    return 'dark';
+    return null;
   }
 
   //Salva il tema nel localStorage.
   setThemeFromLocalStorage(theme: Theme) {
     if (typeof window !== 'undefined' && window.localStorage) {
       localStorage.setItem('theme', theme);
+    }
+  }
+
+  //Inizializa il tema iniziale dal localStorage.
+  initTheme() {
+    const storedTheme = this.getThemeFromLocalStorage();
+    if (storedTheme) {
+      this.setTheme(storedTheme);
     }
   }
 }

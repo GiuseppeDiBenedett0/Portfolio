@@ -2,14 +2,20 @@
   <div class="nav-brand-container">
     <img class="nav-brand-img" src="/Logo.svg" alt="Logo" />
   </div>
-  <div class="nav-links">
-    <a class="nav-link" href="" *ngFor="let link of navLinks">{{ link.link }}</a>
+  <div class="nav-links" *ngIf="languageService.dataLoaded()">
+    <a class="nav-link" href="" *ngFor="let link of navLinks">{{
+      link.link
+    }}</a>
     <div class="nav-icon-container">
       <img
         (click)="themeService.toggleTheme()"
         class="nav-theme-icon"
-        src="/entypo_light-up.svg"
-        alt="Light Mode"
+        [src]="
+          themeService.currentTheme() === 'dark'
+            ? '/entypo_light-up.svg'
+            : '/ic_outline-dark-mode.svg'
+        "
+        [alt]="themeService.currentTheme() === 'dark' ? 'light' : 'dark'"
       />
       <a
         ><img
@@ -20,7 +26,9 @@
               ? '/circle-flags_it.svg'
               : '/circle-flags_lang-en.svg'
           "
-          alt="IT"
+          [alt]="
+            languageService.currentLanguage() === 'IT' ? 'english' : 'italian'
+          "
       /></a>
     </div>
   </div>

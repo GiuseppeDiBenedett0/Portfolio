@@ -1,6 +1,6 @@
 <app-loading-spinner [isLoading]="showSpinner" />
 
-<div [ngClass]="{ 'hide-content': showSpinner }">
+<div class="hide-content" [ngClass]="{ 'show-content': !showSpinner }">
   <app-navbar />
   <div class="wrapper">
     <app-main />

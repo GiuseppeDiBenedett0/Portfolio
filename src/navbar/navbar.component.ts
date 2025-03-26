@@ -68,8 +68,10 @@ export class NavbarComponent implements OnInit {
 
   //Carica i link della navbar in base ai dati forniti da LanguageService.
   loadNavLinks() {
-    this.navLinks = this.languageService.siteData
-      ? this.languageService.siteData['Navbar'] || []
-      : [];
+    if (this.languageService.dataLoaded()) {
+      this.navLinks = this.languageService.siteData
+        ? this.languageService.siteData['Navbar'] || []
+        : [];
+    }
   }
 }

@@ -4,8 +4,12 @@
       <img
         (click)="themeService.toggleTheme()"
         class="nav-theme-icon"
-        src="/entypo_light-up.svg"
-        alt="Light Mode"
+        [src]="
+          themeService.currentTheme() === 'dark'
+            ? '/entypo_light-up.svg'
+            : '/ic_outline-dark-mode-white.svg'
+        "
+        [alt]="themeService.currentTheme() === 'dark' ? 'light' : 'dark'"
       />
       <a
         ><img
@@ -16,7 +20,9 @@
               ? '/circle-flags_it.svg'
               : '/circle-flags_lang-en.svg'
           "
-          alt="IT"
+          [alt]="
+            languageService.currentLanguage() === 'IT' ? 'english' : 'italian'
+          "
       /></a>
     </div>
     <span class="close-icon" (click)="closeMenu()"
@@ -28,7 +34,9 @@
   </div>
   <div class="menu-container">
     <div class="nav-links">
-      <a class="nav-link" href="" *ngFor="let link of navLinks">{{ link.link }}</a>
+      <a class="nav-link" href="" *ngFor="let link of navLinks">{{
+        link.link
+      }}</a>
     </div>
   </div>
 </div>

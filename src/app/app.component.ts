@@ -17,8 +17,6 @@ export class AppComponent {
   async ngOnInit(): Promise<void> {
     await this.languageService.initLanguage();
     this.isLoading = !this.languageService.dataLoaded();
-    setTimeout(() => {
-      this.showSpinner = false;
-    }, 500);
+    this.showSpinner = this.isLoading;
   }
 }

@@ -59,11 +59,14 @@ export class LanguageService {
   }
 
   //Recupera la lingua salvata nel localStorage, se presente.
-  getLanguageFromLocalStorage(): Language {
+  getLanguageFromLocalStorage(): Language | null {
     if (typeof window !== 'undefined' && window.localStorage) {
-      return (localStorage.getItem('language') as Language) ?? 'IT';
+      const storedLanguage = localStorage.getItem('language');
+      return storedLanguage === 'IT' || storedLanguage === 'EN'
+        ? storedLanguage
+        : null;
     }
-    return 'IT';
+    return null;
   }
 
   //Salva la lingua nel localStorage per mantenerla tra le sessioni.
@@ -81,6 +84,10 @@ export class LanguageService {
   //Inizializza la lingua all'avvio del servizio, recuperando i dati dal localStorage.
   async initLanguage(): Promise<void> {
     const storedLanguage = this.getLanguageFromLocalStorage();
+    if (!storedLanguage) {
+      return;
+    }
+
     return new Promise<void>((resolve) => {
       this.loadSiteData(storedLanguage).subscribe({
         next: (data) => {
