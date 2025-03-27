@@ -9,6 +9,8 @@ import {
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { ThemeService } from '../services/theme.service';
 import { LanguageService } from '../services/language.service';
+import { DOCUMENT } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -25,11 +27,16 @@ export class NavbarComponent implements OnInit {
   private readonly maxWidthQuery = '(max-width: 991px)';
 
   @Output() languageChange = new EventEmitter<string>();
+  @Output() navigate = new EventEmitter<string>();
 
   readonly themeService = inject(ThemeService);
   readonly languageService = inject(LanguageService);
+  private readonly document = inject(DOCUMENT);
 
-  constructor(private breakpointObserver: BreakpointObserver) {
+  constructor(
+    private breakpointObserver: BreakpointObserver,
+    private router: Router
+  ) {
     //Effetto reattivo quando la lingua cambia.
     effect(() => {
       this.languageService.currentLanguage();
@@ -59,11 +66,13 @@ export class NavbarComponent implements OnInit {
   //Alterna la visibilità del menu mobile.
   showMobileMenu() {
     this.showMenu = !this.showMenu;
+    this.menuScroll();
   }
 
   //Aggiorna lo stato del menu.
   updateMenu(menu: boolean) {
     this.showMenu = menu;
+    this.menuScroll();
   }
 
   //Carica i link della navbar in base ai dati forniti da LanguageService.
@@ -73,5 +82,17 @@ export class NavbarComponent implements OnInit {
         ? this.languageService.siteData['Navbar'] || []
         : [];
     }
+  }
+
+  menuScroll() {
+    if (this.showMenu) {
+      this.document.body.style.overflow = 'hidden';
+    } else {
+      this.document.body.style.overflow = 'auto';
+    }
+  }
+
+  onNavigate(section: string) {
+    this.navigate.emit(section);
   }
 }

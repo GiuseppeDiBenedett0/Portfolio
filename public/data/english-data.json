@@ -1,9 +1,21 @@
 {
   "Navbar": [
-    { "link": "Home" },
-    { "link": "About" },
-    { "link": "Skills" },
-    { "link": "Works" },
-    { "link": "Contact" }
+    { "id": 1, "link": "Home" },
+    { "id": 2, "link": "About" },
+    { "id": 3, "link": "Skills" },
+    { "id": 4, "link": "Works" },
+    { "id": 5, "link": "Contact" }
+  ],
+  "Main": [
+    { "title1": "Hello, I am" },
+    { "title2": "Giuseppe Di Benedetto" },
+    { "title3": "Full Stack Developer" },
+    { "title4": "Based in Cagliari" }
+  ],
+  "About": [
+    { "title": "Who am I:" },
+    {
+      "paragraph": "I am passionate about programming and PC hardware maintenance. Curiosity and a strong desire to learn led me to explore the world of web development in 2022 when I started deepening my knowledge of HTML5 and CSS through online courses. This experience sparked a deep interest in web development, motivating me to pursue a full-stack developer course at TNV Academy in Cagliari in 2023. Lately, I have been primarily focusing on Angular, refining my skills in this framework to create modern and dynamic user interfaces. At the same time, I have developed a growing interest in technologies such as React, MongoDB, and Express. Additionally, I have proficiency in Java and Spring."
+    }
   ]
 }

@@ -19,7 +19,7 @@ export class NavMenuComponent {
 
   //Chiude il menu e emette l'evento per aggiornare lo stato.
   closeMenu() {
+    this.showMenuOutput.emit(!this.showMenuInput);
     this.showMenuInput = !this.showMenuInput;
-    this.showMenuOutput.emit(this.showMenuInput);
   }
 }

@@ -5,5 +5,17 @@
     { "link": "Skills" },
     { "link": "Portfolio" },
     { "link": "Contatti" }
+  ],
+  "Main": [
+    { "title1": "Ciao, Sono" },
+    { "title2": "Giuseppe Di Benedetto" },
+    { "title3": "Full Stack Developer" },
+    { "title4": "Residente a Cagliari" }
+  ],
+  "About": [
+    { "title": "Chi sono:" },
+    {
+      "paragraph": "Sono un appassionato di programmazione e manutenzione hardware dei PC. La curiosità e la voglia di apprendere mi hanno spinto a esplorare il mondo della programmazione web nel 2022, quando ho iniziato ad approfondire HTML5 e CSS tramite corsi online. Questa esperienza ha suscitato in me un forte interesse per lo sviluppo web, motivandomi a proseguire con un corso di sviluppatore full stack presso TNV Academy di Cagliari nel 2023. Negli ultimi tempi mi sono concentrato principalmente su Angular, approfondendo le mie competenze in questo framework per la creazione di interfacce utente moderne e dinamiche. Al contempo, ho sviluppato un interesse crescente per tecnologie come React, MongoDB ed Express. Ho, inoltre, dimestichezza con il linguaggio Java e Spring."
+    }
   ]
 }

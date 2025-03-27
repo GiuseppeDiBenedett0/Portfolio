@@ -1,9 +1,12 @@
 <app-loading-spinner [isLoading]="showSpinner" />
-
 <div class="hide-content" [ngClass]="{ 'show-content': !showSpinner }">
-  <app-navbar />
-  <div class="wrapper">
-    <app-main />
-    <router-outlet></router-outlet>
+  <app-navbar (navigate)="onNavigate($event)"></app-navbar>
+  <div id="Home" class="wrapper">
+    <app-main></app-main>
+  </div>
+  <div class="section-divider"></div>
+  <div id="About" class="wrapper">
+    <app-about></app-about>
   </div>
 </div>
+<router-outlet> </router-outlet>

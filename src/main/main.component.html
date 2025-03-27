@@ -1,9 +1,10 @@
 <div class="wrapper">
   <div class="text-container">
-    <h1 class="first-title">Ciao, Sono</h1>
-    <h1 class="second-title">Giuseppe Di Benedetto</h1>
-    <h1 class="third-title">Full Stack Developer</h1>
-    <h1 class="forth-title">Residente a Cagliari</h1>
+    <h1 class="title">
+      <span *ngFor="let item of titleData" [className]="item.className">
+        {{ item.text }}<br />
+      </span>
+    </h1>
     <div class="icon-container">
       <img
         class="social-icon"

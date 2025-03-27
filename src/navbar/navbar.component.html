@@ -3,9 +3,12 @@
     <img class="nav-brand-img" src="/Logo.svg" alt="Logo" />
   </div>
   <div class="nav-links" *ngIf="languageService.dataLoaded()">
-    <a class="nav-link" href="" *ngFor="let link of navLinks">{{
-      link.link
-    }}</a>
+    <a
+      class="nav-link"
+      (click)="onNavigate(link.link)"
+      *ngFor="let link of navLinks"
+      >{{ link.link }}</a
+    >
     <div class="nav-icon-container">
       <img
         (click)="themeService.toggleTheme()"

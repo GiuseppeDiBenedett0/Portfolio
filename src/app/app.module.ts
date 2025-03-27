@@ -9,6 +9,8 @@ import {
   provideHttpClient,
   withInterceptorsFromDi,
 } from '@angular/common/http';
+import { RouterModule, Routes } from '@angular/router';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +23,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MainComponent } from '../main/main.component';
 import { LoadingSpinnerComponent } from '../components/loading-spinner/loading-spinner.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { AboutComponent } from '../about/about.component';
 
 @NgModule({
   declarations: [
@@ -29,9 +32,11 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     NavMenuComponent,
     MainComponent,
     LoadingSpinnerComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
+    RouterModule,
     AppRoutingModule,
     LayoutModule,
     MatButtonModule,
