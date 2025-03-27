@@ -10,7 +10,7 @@ import {
   withInterceptorsFromDi,
 } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,6 +24,7 @@ import { MainComponent } from '../main/main.component';
 import { LoadingSpinnerComponent } from '../components/loading-spinner/loading-spinner.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { AboutComponent } from '../about/about.component';
+import { SkillsComponent } from '../skills/skills.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { AboutComponent } from '../about/about.component';
     MainComponent,
     LoadingSpinnerComponent,
     AboutComponent,
+    SkillsComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,6 +45,7 @@ import { AboutComponent } from '../about/about.component';
     MatDividerModule,
     MatIconModule,
     MatProgressSpinnerModule,
+    BrowserAnimationsModule,
   ],
   providers: [
     provideClientHydration(withEventReplay()),

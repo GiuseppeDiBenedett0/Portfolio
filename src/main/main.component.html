@@ -1,29 +1,38 @@
 <div class="wrapper">
   <div class="text-container">
     <h1 class="title">
-      <span *ngFor="let item of titleData" [className]="item.className">
+      <span
+        *ngFor="let item of titleData; let i = index"
+        [className]="item.className"
+        [@titleFadeAnimation]="titleFadeState[i]"
+      >
         {{ item.text }}<br />
       </span>
     </h1>
-    <div class="icon-container">
-      <img
-        class="social-icon"
-        [src]="
-          themeService.currentTheme() === 'dark'
-            ? '/github-dark.svg'
-            : '/github-light.svg'
-        "
-        alt="Icon"
-      />
-      <img
-        class="social-icon"
-        [src]="
-          themeService.currentTheme() === 'dark'
-            ? '/mdi_linkedin-dark.svg'
-            : '/mdi_linkedin-light.svg'
-        "
-        alt="Icon"
-      />
+    <div class="icon-container" [@iconFadeAnimation]="iconFadeState">
+      <a href="https://github.com/GiuseppeDiBenedett0?tab=repositories">
+        <img
+          class="social-icon"
+          [src]="
+            themeService.currentTheme() === 'dark'
+              ? '/github-dark.svg'
+              : '/github-light.svg'
+          "
+          alt="Icon"
+        />
+      </a>
+
+      <a href="https://www.linkedin.com/in/giuseppe-di-benedetto-a02179302/">
+        <img
+          class="social-icon"
+          [src]="
+            themeService.currentTheme() === 'dark'
+              ? '/mdi_linkedin-dark.svg'
+              : '/mdi_linkedin-light.svg'
+          "
+          alt="Icon"
+        />
+      </a>
     </div>
   </div>
   <div class="img-container">
@@ -35,6 +44,7 @@
           : '/my-image-light.png'
       "
       alt="Icon"
+      [@ImageFadeAnimation]="imageFadeState"
     />
   </div>
 </div>
