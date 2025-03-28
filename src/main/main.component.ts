@@ -28,7 +28,7 @@ import {
     trigger('ImageFadeAnimation', [
       state('hidden', style({ opacity: 0 })),
       state('visible', style({ opacity: 1 })),
-      transition('hidden => visible', [animate('5000ms ease-in')]),
+      transition('hidden => visible', [animate('3000ms ease-in')]),
     ]),
   ],
 })

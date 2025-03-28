@@ -34,9 +34,12 @@
   </div>
   <div class="menu-container">
     <div class="nav-links">
-      <a class="menu-nav-link" href="" *ngFor="let link of navLinks">{{
-        link.link
-      }}</a>
+      <a
+        class="menu-nav-link"
+        (click)="onNavigate(link.link)"
+        *ngFor="let link of navLinks"
+        >{{ link.link }}</a
+      >
     </div>
   </div>
 </div>

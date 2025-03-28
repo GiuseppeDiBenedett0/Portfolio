@@ -12,6 +12,7 @@ export class NavMenuComponent {
   @Input() showMenuInput: boolean = false;
   @Output() showMenuOutput = new EventEmitter<boolean>();
   @Input() navLinks: any[] = [];
+  @Output() navigateMenu = new EventEmitter<string>();
 
   readonly themeService = inject(ThemeService);
 
@@ -21,5 +22,10 @@ export class NavMenuComponent {
   closeMenu() {
     this.showMenuOutput.emit(!this.showMenuInput);
     this.showMenuInput = !this.showMenuInput;
+  }
+
+  onNavigate(section: string) {
+    this.navigateMenu.emit(section);
+    this.closeMenu();
   }
 }
