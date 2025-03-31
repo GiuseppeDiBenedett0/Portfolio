@@ -1,14 +1,23 @@
-<div class="wrapper">
-  <div>
-    <h1 class="title">titolo</h1>
-    <p class="paragraph">
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius unde
-      eveniet accusantium reiciendis porro quos, vel minima adipisci laborum
-      officiis optio iusto dolore eos illo ducimus esse voluptatum repellendus
-      magnam?
-    </p>
-  </div>
-  <div>
-    <p>icone</p>
+<div class="grid-container">
+  <div *ngFor="let group of skillGroup(); let i = index" class="skills-wrapper">
+    <div class="text-column">
+      <h2 class="title">{{ group.title }}</h2>
+      <p class="paragraph">{{ group.paragraph }}</p>
+    </div>
+    <div class="icon-column" *ngIf="iconVisibility()[i]" [@iconsMenu]>
+      <app-skill-icon [skills]="group.icons"></app-skill-icon>
+    </div>
+    <div class="button-container">
+      <button
+        mat-fab
+        extended
+        class="show-icon-button"
+        (click)="toggleIcons(i)"
+      >
+        <mat-icon class="button-icon">{{
+          iconVisibility()[i] ? "arrow_drop_up" : "arrow_drop_down"
+        }}</mat-icon>
+      </button>
+    </div>
   </div>
 </div>

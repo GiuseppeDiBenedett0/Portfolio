@@ -25,6 +25,7 @@ import { LoadingSpinnerComponent } from '../components/loading-spinner/loading-s
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { AboutComponent } from '../about/about.component';
 import { SkillsComponent } from '../skills/skills.component';
+import { SkillIconComponent } from '../components/skill-icon/skill-icon.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { SkillsComponent } from '../skills/skills.component';
     LoadingSpinnerComponent,
     AboutComponent,
     SkillsComponent,
+    SkillIconComponent,
   ],
   imports: [
     BrowserModule,

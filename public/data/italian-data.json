@@ -17,5 +17,113 @@
     {
       "paragraph": "Sono un appassionato di programmazione e manutenzione hardware dei PC. La curiosità e la voglia di apprendere mi hanno spinto a esplorare il mondo della programmazione web nel 2022, quando ho iniziato ad approfondire HTML5 e CSS tramite corsi online. Questa esperienza ha suscitato in me un forte interesse per lo sviluppo web, motivandomi a proseguire con un corso di sviluppatore full stack presso TNV Academy di Cagliari nel 2023. Negli ultimi tempi mi sono concentrato principalmente su Angular, approfondendo le mie competenze in questo framework per la creazione di interfacce utente moderne e dinamiche. Al contempo, ho sviluppato un interesse crescente per tecnologie come React, MongoDB ed Express. Ho, inoltre, dimestichezza con il linguaggio Java e Spring."
     }
+  ],
+  "Skills": [
+    {
+      "title": "Competenze Sviluppo Web",
+      "paragraph": "Morem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. ",
+      "icons": [
+        {
+          "name": "Html5",
+          "src": "/material-icon-theme_html.svg",
+          "alt": "HTML5"
+        },
+        {
+          "name": "CSS",
+          "src": "/devicon_css3.svg",
+          "alt": "CSS"
+        },
+        {
+          "name": "JAVASCRIPT",
+          "src": "/skill-icons_javascript.svg",
+          "alt": "HTML5"
+        },
+        {
+          "name": "TYPESCRIPT",
+          "src": "/skill-icons_typescript.svg",
+          "alt": "HTML5"
+        },
+        {
+          "name": "ANGULAR",
+          "src": "/devicon_angular.svg",
+          "alt": "HTML5"
+        },
+        {
+          "name": "MATERIAL",
+          "src": "/devicon_angularmaterial.svg",
+          "alt": "HTML5"
+        },
+        {
+          "name": "REACT",
+          "src": "/skill-icons_react-dark.svg",
+          "alt": "HTML5"
+        },
+        {
+          "name": "BOOTSTRAP",
+          "src": "/skill-icons_bootstrap.svg",
+          "alt": "HTML5"
+        },
+        {
+          "name": "SPRING",
+          "src": "/devicon_spring.svg",
+          "alt": "HTML5"
+        },
+        {
+          "name": "NODE.JS",
+          "src": "/vscode-icons_file-type-node.svg",
+          "alt": "HTML5"
+        },
+        {
+          "name": "MYSQL",
+          "src": "/devicon_mysql-dark.svg",
+          "alt": "HTML5"
+        }
+      ]
+    },
+    {
+      "title": "Competenze Web Design",
+      "paragraph": "Morem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. ",
+      "icons": [
+        {
+          "name": "FIGMA",
+          "src": "/material-icon-theme_figma.svg",
+          "alt": "FIGMA"
+        },
+        {
+          "name": "PHOTOSHOP",
+          "src": "/devicon_photoshop.svg",
+          "alt": "PHOTOSHOP"
+        },
+        { "name": "CANVA", "src": "/devicon_canva.svg", "alt": "CANVA" }
+      ]
+    },
+    {
+      "title": "Linguaggi Di Programazzione",
+      "paragraph": "Morem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. ",
+      "icons": [
+        { "name": "C", "src": "/c.svg", "alt": "C" },
+        { "name": "JAVA", "src": "/logos_java.svg", "alt": "JAVA" }
+      ]
+    },
+    {
+      "title": "Competenze Tools Vari",
+      "paragraph": "Morem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. ",
+      "icons": [
+        { "name": "SLACK", "src": "/devicon_slack.svg", "alt": "SLACK" },
+        { "name": "POSTMAN", "src": "/devicon_postman.svg", "alt": "POSTMAN" },
+        { "name": "GIT", "src": "/devicon_git.svg", "alt": "GIT" },
+        { "name": "GITHUB", "src": "/mdi_github.svg", "alt": "GITHUB" },
+        {
+          "name": "FIREBASE",
+          "src": "/vscode-icons_file-type-firebase.svg",
+          "alt": "FIREBASE"
+        },
+        {
+          "name": "EXCEL",
+          "src": "/file-icons_microsoft-excel.svg",
+          "alt": "EXCEL"
+        }
+      ]
+    }
   ]
 }

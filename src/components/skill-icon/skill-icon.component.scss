@@ -1,0 +1,38 @@
+.skills-icon-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 8px;
+  transition: 1ms ease-in-out;
+
+  @media (max-width: 400px) {
+    gap: 12px;
+  }
+}
+
+.icon-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 92px;
+  height: 112px;
+  border-radius: 16px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.icon-body:hover {
+  transform: scale(1.1);
+}
+
+.icon-title {
+  font-size: 12px;
+  margin: 8px 0 8px 0;
+}
+
+.icon-img {
+  width: 62px;
+  height: 62px;
+}
