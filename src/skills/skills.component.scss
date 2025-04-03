@@ -36,10 +36,18 @@
 }
 
 .title {
-  font-size: 27px;
+  font-size: 30px;
   border-bottom: 1px solid;
 
-  @media (max-width: 590px) {
+  @media (max-width: 1225px) {
+    font-size: 27px;
+  }
+
+  @media (max-width: 578px) {
+    font-size: 26px;
+  }
+
+  @media (max-width: 400px) {
     font-size: 24px;
   }
 }
@@ -85,7 +93,7 @@
   height: 30px;
   border-radius: 0 0 8px 8px;
 
-  @media(max-width: 1057px) {
+  @media (max-width: 1057px) {
     position: relative;
     top: 17px;
   }

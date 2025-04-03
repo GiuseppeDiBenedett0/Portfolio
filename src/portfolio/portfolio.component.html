@@ -1,0 +1,48 @@
+<div class="portfolio-container" *ngFor="let group of projectGroup()">
+  <h2 class="portfolio-section-title">
+    {{ group.title }}
+  </h2>
+  <div
+    class="project-card"
+    *ngFor="let project of group.projects"
+    (mouseenter)="onHover(project, true)"
+    (mouseleave)="onHover(project, false)"
+  >
+    <img class="project-img" [src]="project.src" [alt]="project.alt" />
+    <div
+      class="project-link"
+      [@showLinks]="project.hovered ? 'visible' : 'hidden'"
+    >
+      <a class="link-a" [href]="project.web">
+        <img
+          class="link-img"
+          [src]="
+            themeService.currentTheme() === 'dark'
+              ? '/fluent-mdl2_website-dark.svg'
+              : '/fluent-mdl2_website-light.svg'
+          "
+          alt="Website"
+        />
+      </a>
+    </div>
+    <div
+      class="project-link"
+      [@showLinks]="project.hovered ? 'visible' : 'hidden'"
+    >
+      <a class="link-a" [href]="project.github">
+        <img
+          class="link-img"
+          [src]="
+            themeService.currentTheme() === 'dark'
+              ? '/mdi_github.svg'
+              : '/mdi_github-light.svg'
+          "
+          alt="Github code"
+        />
+      </a>
+    </div>
+    <div class="project-name-container">
+      <h4 class="project-name">{{ project.projectName }}</h4>
+    </div>
+  </div>
+</div>

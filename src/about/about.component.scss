@@ -38,7 +38,11 @@
 }
 
 .about-title {
-  font-size: 27px;
+  font-size: 30px;
+
+  @media (max-width: 1225px) {
+    font-size: 27px;
+  }
 
   @media (max-width: 578px) {
     font-size: 26px;

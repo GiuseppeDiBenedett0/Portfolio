@@ -1,8 +1,8 @@
 {
   "Navbar": [
     { "link": "Home" },
-    { "link": "About" },
-    { "link": "Skills" },
+    { "link": "Chi sono" },
+    { "link": "Competenze" },
     { "link": "Portfolio" },
     { "link": "Contatti" }
   ],
@@ -122,6 +122,34 @@
           "name": "EXCEL",
           "src": "/file-icons_microsoft-excel.svg",
           "alt": "EXCEL"
+        }
+      ]
+    }
+  ],
+  "Portfolio": [
+    {
+      "title": "Portfolio",
+      "projects": [
+        {
+          "src": "/La-Pirri-Gentile-screen.svg",
+          "alt": "La Pirri Gentile",
+          "projectName": "La Pirri Gentile",
+          "web": "https://ristorante-de-francisci.web.app/",
+          "github": "https://github.com/GiuseppeDiBenedett0/Ristorante-De-Franx"
+        },
+        {
+          "src": "/locandina The Dandy Step.svg",
+          "alt": "The Dandy Step",
+          "projectName": "The Dandy Step",
+          "web": "https://the-dandy-step.web.app/home",
+          "github": "https://github.com/GiuseppeDiBenedett0/The-Dandy-House"
+        },
+        {
+          "src": "/locandina The Dandy Step.svg",
+          "alt": "Il Mio Portfolio",
+          "projectName": "Il Mio Portfolio",
+          "web": "https://the-dandy-step.web.app/home",
+          "github": "https://github.com/GiuseppeDiBenedett0/Portfolio"
         }
       ]
     }

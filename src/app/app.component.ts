@@ -23,12 +23,41 @@ export class AppComponent {
   }
 
   onNavigate(section: string) {
-    this.scrollTo(section);
+    let id = section;
+    const currentLanguage = this.languageService.currentLanguage();
+
+    switch (currentLanguage) {
+      case 'IT':
+        switch (section) {
+          case 'Portfolio':
+            id = 'Portfolio';
+            break;
+          case 'Chi sono':
+            id = 'About';
+            break;
+          case 'Competenze':
+            id = 'Skills';
+            break;
+          case 'Contatti':
+            id = 'Contact';
+            break;
+          default:
+            id = section;
+            break;
+        }
+        break;
+      default:
+        //Se la lingua non è italiano, traduce 'Works' in 'Portfolio'.
+        id = section === 'Works' ? 'Portfolio' : section;
+        break;
+    }
+    this.scrollTo(id);
   }
 
   scrollTo(section: string) {
     const element = this.document.getElementById(section);
     if (element) {
+      //Calcola la posizione dell'elemento nella pagina.
       const position = element.getBoundingClientRect().top + window.pageYOffset;
       window.scrollTo({
         top: position - 140,

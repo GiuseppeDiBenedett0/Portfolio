@@ -26,6 +26,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { AboutComponent } from '../about/about.component';
 import { SkillsComponent } from '../skills/skills.component';
 import { SkillIconComponent } from '../components/skill-icon/skill-icon.component';
+import { PortfolioComponent } from '../portfolio/portfolio.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { SkillIconComponent } from '../components/skill-icon/skill-icon.componen
     AboutComponent,
     SkillsComponent,
     SkillIconComponent,
+    PortfolioComponent,
   ],
   imports: [
     BrowserModule,

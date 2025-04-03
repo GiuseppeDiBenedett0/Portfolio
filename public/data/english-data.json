@@ -1,10 +1,10 @@
 {
   "Navbar": [
-    { "id": 1, "link": "Home" },
-    { "id": 2, "link": "About" },
-    { "id": 3, "link": "Skills" },
-    { "id": 4, "link": "Works" },
-    { "id": 5, "link": "Contact" }
+    { "link": "Home" },
+    { "link": "About" },
+    { "link": "Skills" },
+    { "link": "Works" },
+    { "link": "Contact" }
   ],
   "Main": [
     { "title1": "Hello, I am" },
@@ -122,6 +122,34 @@
           "name": "EXCEL",
           "src": "/file-icons_microsoft-excel.svg",
           "alt": "EXCEL"
+        }
+      ]
+    }
+  ],
+  "Portfolio": [
+    {
+      "title": "Works",
+      "projects": [
+        {
+         "src": "/La-Pirri-Gentile-screen.svg",
+          "alt": "La Pirri Gentile",
+          "projectName": "La Pirri Gentile",
+          "web": "https://the-dandy-step.web.app/home",
+          "github": "https://github.com/GiuseppeDiBenedett0/The-Dandy-House"
+        },
+        {
+          "src": "/locandina The Dandy Step.svg",
+          "alt": "The Dandy Step",
+          "projectName": "The Dandy Step",
+          "web": "https://the-dandy-step.web.app/home",
+          "github": "https://github.com/GiuseppeDiBenedett0/The-Dandy-House"
+        },
+        {
+          "src": "/locandina The Dandy Step.svg",
+          "alt": "My Portfolio",
+          "projectName": "My Portfolio",
+          "web": "https://the-dandy-step.web.app/home",
+          "github": "https://github.com/GiuseppeDiBenedett0/Portfolio"
         }
       ]
     }
