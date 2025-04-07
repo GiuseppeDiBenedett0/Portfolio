@@ -131,7 +131,7 @@
       "title": "Works",
       "projects": [
         {
-         "src": "/La-Pirri-Gentile-screen.svg",
+          "src": "/La-Pirri-Gentile-screen.svg",
           "alt": "La Pirri Gentile",
           "projectName": "La Pirri Gentile",
           "web": "https://the-dandy-step.web.app/home",
@@ -152,6 +152,27 @@
           "github": "https://github.com/GiuseppeDiBenedett0/Portfolio"
         }
       ]
+    }
+  ],
+  "Contact": [
+    {
+      "sectionTitle": "Contact",
+      "text": "Feel free to send me a message!",
+      "nameInput": "Name",
+      "emailInput": "Email",
+      "textInput": "Message",
+      "button": "Submit"
+    }
+  ],
+  "Footer": [
+    {
+      "footerText": "Website developed by Giuseppe Di Benedetto"
+    }
+  ],
+  "ToastMessage": [
+    {
+      "title": "Form updated",
+      "paragraph": "I don't know..."
     }
   ]
 }

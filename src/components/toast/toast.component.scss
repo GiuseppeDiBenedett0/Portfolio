@@ -1,0 +1,24 @@
+.toastContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  background-color: #dfdfdf;
+  color: #000000;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.toastTitle {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.toastParagraph {
+  margin: 0;
+}

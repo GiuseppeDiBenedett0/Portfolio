@@ -153,5 +153,34 @@
         }
       ]
     }
+  ],
+  "Contact": [
+    {
+      "sectionTitle": "Contatti",
+      "text": "Sentiti libero di scrivermi!",
+      "nameInput": "Nome",
+      "emailInput": "Email",
+      "textInput": "Messaggio",
+      "button": "Invia"
+    }
+  ],
+  "Footer": [
+    {
+      "footerText": "Sito realizzato da Giuseppe Di Benedetto"
+    }
+  ],
+  "ToastMessage": [
+    {
+      "title": "Form aggiornato",
+      "paragraph": "Chissà che succede"
+    },
+    {
+      "title": "Errore!",
+      "paragraph": "Form non valido!"
+    },
+    {
+      "title": "Form non compilato correttamente!",
+      "paragraph": "Chissà che succede"
+    }
   ]
 }

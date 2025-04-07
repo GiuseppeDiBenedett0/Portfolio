@@ -1,0 +1,30 @@
+<app-toast
+  [toastTitle]="toastTitle"
+  [toastParagraph]="toastParagraph"
+  [isVisible]="showToast"
+/>
+<h2 class="section-contact-title">{{ contactContent()?.sectionTitle }}</h2>
+<div class="section-contact-container">
+  <div>
+    <h3 class="contact-title">{{ contactContent()?.text }}</h3>
+  </div>
+  <div class="contact-form-container">
+    <form class="form" #form="ngForm" (ngSubmit)="sendForm(form)">
+      <mat-form-field class="form-field">
+        <mat-label>{{ contactContent()?.nameInput }}</mat-label>
+        <input matInput type="text" name="name" ngModel required />
+      </mat-form-field>
+      <mat-form-field class="form-field">
+        <mat-label>{{ contactContent()?.emailInput }}</mat-label>
+        <input matInput type="email" name="email" ngModel required email />
+      </mat-form-field>
+      <mat-form-field class="form-field">
+        <mat-label>{{ contactContent()?.textInput }}</mat-label>
+        <textarea matInput name="message" ngModel required></textarea>
+      </mat-form-field>
+      <button mat-flat-button class="form-button" type="submit">
+        {{ contactContent()?.button }} <mat-icon>send</mat-icon>
+      </button>
+    </form>
+  </div>
+</div>

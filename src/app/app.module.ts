@@ -11,11 +11,17 @@ import {
 } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { NavMenuComponent } from '../components/nav-menu/nav-menu.component';
+import { AboutComponent } from '../about/about.component';
+import { SkillsComponent } from '../skills/skills.component';
+import { SkillIconComponent } from '../components/skill-icon/skill-icon.component';
+import { PortfolioComponent } from '../portfolio/portfolio.component';
+import { ContactComponent } from '../contact/contact.component';
 
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
@@ -23,10 +29,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { MainComponent } from '../main/main.component';
 import { LoadingSpinnerComponent } from '../components/loading-spinner/loading-spinner.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { AboutComponent } from '../about/about.component';
-import { SkillsComponent } from '../skills/skills.component';
-import { SkillIconComponent } from '../components/skill-icon/skill-icon.component';
-import { PortfolioComponent } from '../portfolio/portfolio.component';
+import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { ToastComponent } from '../components/toast/toast.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +45,8 @@ import { PortfolioComponent } from '../portfolio/portfolio.component';
     SkillsComponent,
     SkillIconComponent,
     PortfolioComponent,
+    ContactComponent,
+    ToastComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,6 +58,10 @@ import { PortfolioComponent } from '../portfolio/portfolio.component';
     MatIconModule,
     MatProgressSpinnerModule,
     BrowserAnimationsModule,
+    MatSelectModule,
+    MatInputModule,
+    MatFormFieldModule,
+    FormsModule,
   ],
   providers: [
     provideClientHydration(withEventReplay()),

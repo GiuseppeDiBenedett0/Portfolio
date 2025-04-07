@@ -1,0 +1,100 @@
+.wrapper {
+  margin-bottom: 80px;
+}
+
+.section-contact-title {
+  text-align: center;
+  font-size: 30px;
+
+  @media (max-width: 1225px) {
+    font-size: 27px;
+  }
+
+  @media (max-width: 578px) {
+    font-size: 26px;
+  }
+
+  @media (max-width: 400px) {
+    font-size: 24px;
+  }
+}
+
+.section-contact-container {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  padding: 16px;
+  height: 400px;
+
+  @media (max-width: 1110px) {
+    flex-direction: column;
+    height: 100%;
+  }
+}
+
+.contact-title {
+  font-size: 27px;
+
+  @media (max-width: 1110px) {
+    text-align: center;
+  }
+
+  @media (max-width: 578px) {
+    font-size: 24px;
+  }
+
+  @media (max-width: 400px) {
+    font-size: 20px;
+  }
+}
+
+.contact-form-container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  margin-right: 16px;
+  padding: 8px;
+  width: 50%;
+  background-color: #e5e5e5;
+
+  @media (max-width: 1110px) {
+    width: 100%;
+    margin-right: 16px;
+    padding: 0;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+
+  @media (max-width: 1110px) {
+    padding: 8px;
+  }
+}
+
+.form-field {
+  background-color: transparent;
+
+  @media (max-width: 1110px) {
+    margin: 16px;
+  }
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+  max-height: 125px;
+  overflow-y: auto;
+
+  @media (max-width: 500px) {
+    min-height: 150px;
+    max-height: 200px;
+  }
+}
+
+.form-button {
+  width: 120px;
+}

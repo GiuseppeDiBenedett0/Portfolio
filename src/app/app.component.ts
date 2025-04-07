@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, effect, inject, signal } from '@angular/core';
 import { LanguageService } from '../services/language.service';
 import { DOCUMENT } from '@angular/common';
 
@@ -12,8 +12,20 @@ export class AppComponent {
   title = 'Portfolio2';
   isLoading: boolean = true;
   showSpinner: boolean = true;
+  isVisible: boolean = false;
+  textFooter = signal<string>('');
   private readonly languageService = inject(LanguageService);
+  readonly currentLanguage = signal(this.languageService.currentLanguage());
   private readonly document = inject(DOCUMENT);
+
+  constructor() {
+    effect(() => {
+      this.currentLanguage.set(this.languageService.currentLanguage());
+      if (this.languageService.dataLoaded()) {
+        this.footerText();
+      }
+    });
+  }
 
   //Carica la lingua salvata e i dati del sito quando il componente viene inizializzato e simula il caricamento.
   async ngOnInit(): Promise<void> {
@@ -54,6 +66,7 @@ export class AppComponent {
     this.scrollTo(id);
   }
 
+  //Scorre la pagina verso una sezione specifica tramite il suo id.
   scrollTo(section: string) {
     const element = this.document.getElementById(section);
     if (element) {
@@ -63,6 +76,19 @@ export class AppComponent {
         top: position - 140,
         behavior: 'smooth',
       });
+    }
+  }
+
+  //Imposta il testo del footer in base alla lingua corrente.
+  footerText() {
+    if (
+      this.languageService.dataLoaded() &&
+      this.languageService.siteData?.['Footer']
+    ) {
+      console.log('Footer data:', this.languageService.siteData['Footer']);
+      this.textFooter.set(
+        this.languageService.siteData['Footer'][0]?.footerText
+      );
     }
   }
 }

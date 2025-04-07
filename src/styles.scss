@@ -98,15 +98,6 @@ html {
     color: #000000;
   }
 
-  //Sezione progetti.
-  .link-a {
-    background-color: #080808;
-  }
-
-  .project-name-container {
-    background-color: #0c343d;
-  }
-
   //Immagine che separa le sezioni.
   .second-section-divider {
     width: 100%;
@@ -123,6 +114,76 @@ html {
     @media (max-width: 800px) {
       height: 16%;
     }
+  }
+
+  //Sezione progetti.
+  .link-a {
+    background-color: #080808;
+  }
+
+  .project-name-container {
+    background-color: #0c343d;
+  }
+
+  //Sezione contatti.
+  .section-contact-container {
+    background-color: #0c343d;
+  }
+
+  .form-field {
+    @include mat.form-field-overrides(
+      (
+        filled-container-color: #ffffff,
+        filled-label-text-color: #0000007e,
+        filled-focus-label-text-color: #0000007e,
+        filled-hover-label-text-color: #0000007e,
+        filled-error-hover-label-text-color: #ff8174,
+        filled-error-focus-label-text-color: #ff8174,
+        filled-error-label-text-color: #ff8174,
+        filled-active-indicator-color: #0000007e,
+        filled-focus-active-indicator-color: #0000007e,
+        filled-hover-active-indicator-color: #0000007e,
+        filled-error-active-indicator-color: #ff8174,
+        filled-error-focus-active-indicator-color: #ff8174,
+        filled-error-hover-active-indicator-color: #ff8174,
+      )
+    );
+  }
+
+  .form-button {
+    background-color: #0c343d;
+  }
+
+  .form-button {
+    @include mat.button-overrides(
+      (
+        filled-container-color: #0c343d,
+        filled-label-text-color: #ffffff,
+      )
+    );
+  }
+
+  //Immagine che separa le sezioni.
+  .third-section-divider {
+    width: 100%;
+    max-height: 350px;
+    height: 100%;
+    background: url("/Wave3-dark.svg") no-repeat center bottom;
+    background-size: cover;
+    margin: 80px 0 80px 0;
+
+    @media (max-width: 1000px) {
+      height: 30%;
+    }
+
+    @media (max-width: 800px) {
+      height: 16%;
+    }
+  }
+
+   //Footer
+   .footer {
+    background-color: #040404;
   }
 }
 
@@ -216,11 +277,6 @@ html.light-mode {
     background-color: #e5e5e5;
   }
 
-  //Sezione progetti.
-  .project-name-container {
-    background-color: #007994;
-  }
-
   //Immagine che separa le sezioni.
   .second-section-divider {
     width: 100%;
@@ -237,6 +293,68 @@ html.light-mode {
     @media (max-width: 800px) {
       height: 16%;
     }
+  }
+
+  //Sezione progetti.
+  .project-name-container {
+    background-color: #007994;
+  }
+
+  //Sezione contatti.
+  .section-contact-container {
+    background-color: #007994;
+  }
+
+  .form-field {
+    @include mat.form-field-overrides(
+      (
+        filled-container-color: #ffffff,
+        filled-label-text-color: #0000007e,
+        filled-focus-label-text-color: #0000007e,
+        filled-hover-label-text-color: #0000007e,
+        filled-error-hover-label-text-color: #ff8174,
+        filled-error-focus-label-text-color: #ff8174,
+        filled-error-label-text-color: #ff8174,
+        filled-active-indicator-color: #0000007e,
+        filled-focus-active-indicator-color: #0000007e,
+        filled-hover-active-indicator-color: #0000007e,
+        filled-error-active-indicator-color: #ff8174,
+        filled-error-focus-active-indicator-color: #ff8174,
+        filled-error-hover-active-indicator-color: #ff8174,
+      )
+    );
+  }
+
+  .form-button {
+    @include mat.button-overrides(
+      (
+        filled-container-color: #007994,
+        filled-label-text-color: #000000,
+      )
+    );
+  }
+
+  //Immagine che separa le sezioni.
+  .third-section-divider {
+    width: 100%;
+    max-height: 350px;
+    height: 100%;
+    background: url("/Wave3-light.svg") no-repeat center bottom;
+    background-size: cover;
+    margin: 80px 0 80px 0;
+
+    @media (max-width: 1000px) {
+      height: 30%;
+    }
+
+    @media (max-width: 800px) {
+      height: 16%;
+    }
+  }
+
+  //Footer
+  .footer {
+    background-color: #cdcdcd;
   }
 }
 
