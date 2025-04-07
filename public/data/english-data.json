@@ -10,18 +10,18 @@
     { "title1": "Hello, I am" },
     { "title2": "Giuseppe Di Benedetto" },
     { "title3": "Full Stack Developer" },
-    { "title4": "Based in Cagliari" }
+    { "title4": "I live in Cagliari" }
   ],
   "About": [
     { "title": "Who am I:" },
     {
-      "paragraph": "I am passionate about programming and PC hardware maintenance. Curiosity and a strong desire to learn led me to explore the world of web development in 2022 when I started deepening my knowledge of HTML5 and CSS through online courses. This experience sparked a deep interest in web development, motivating me to pursue a full-stack developer course at TNV Academy in Cagliari in 2023. Lately, I have been primarily focusing on Angular, refining my skills in this framework to create modern and dynamic user interfaces. At the same time, I have developed a growing interest in technologies such as React, MongoDB, and Express. Additionally, I have proficiency in Java and Spring."
+      "paragraph": "I am a web development enthusiast with a deep interest in technology and continuous learning. In 2023, I attended a full-stack developer course at TNV Academy in Cagliari, where I solidified my skills, and since then, I have continued to deepen my knowledge independently. I have built several websites, focusing mainly on the frontend and improving my skills in UI design. I’ve learned to balance aesthetics and functionality, successfully creating increasingly modern and responsive user experiences. I am actively continuing my studies to learn new approaches and ensure I stay up to date with the technologies I already know."
     }
   ],
   "Skills": [
     {
       "title": "Web Development Skills",
-      "paragraph": "Morem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. ",
+      "paragraph": "As a frontend developer with experience in Angular and React, I build dynamic and responsive applications, providing a smooth user experience. I use modern technologies like HTML5, CSS, JavaScript, and TypeScript to create scalable and easily adaptable solutions. I continue to refine my skills to stay updated with the latest innovations in the field.",
       "icons": [
         {
           "name": "Html5",
@@ -82,7 +82,7 @@
     },
     {
       "title": "Web Design Skills",
-      "paragraph": "Morem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. ",
+      "paragraph": "I focus on creating visually appealing and user-friendly web designs. Using various creative tools, I design solutions that meet user needs and enhance the browsing experience. Each project is designed to be increasingly intuitive, with a focus on accessibility and ease of use. I continue to experiment with new techniques to create solutions that meet user expectations.",
       "icons": [
         {
           "name": "FIGMA",
@@ -99,7 +99,7 @@
     },
     {
       "title": "Programming Languages Skills",
-      "paragraph": "Morem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. ",
+      "paragraph": "I have learned to use different programming languages, which have provided me with a solid logical foundation and a good understanding of software structures and architectures. These skills have strengthened my approach to writing clear, efficient, and well-structured code.",
       "icons": [
         { "name": "C", "src": "/c.svg", "alt": "C" },
         { "name": "JAVA", "src": "/logos_java.svg", "alt": "JAVA" }
@@ -107,7 +107,7 @@
     },
     {
       "title": "Various Tools Skills",
-      "paragraph": "Morem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. ",
+      "paragraph": "These tools help me manage and monitor various aspects of the work, from team collaboration to code management, testing, and documentation. With these tools, I make my work more organized and each phase of development more efficient.",
       "icons": [
         { "name": "SLACK", "src": "/devicon_slack.svg", "alt": "SLACK" },
         { "name": "POSTMAN", "src": "/devicon_postman.svg", "alt": "POSTMAN" },
@@ -158,7 +158,7 @@
     {
       "sectionTitle": "Contact",
       "text": "Feel free to send me a message!",
-      "nameInput": "Name",
+      "nameInput": "Name, Surname or Company name",
       "emailInput": "Email",
       "textInput": "Message",
       "button": "Submit"
@@ -171,8 +171,16 @@
   ],
   "ToastMessage": [
     {
-      "title": "Form updated",
-      "paragraph": "I don't know..."
+      "title": "Success!",
+      "paragraph": "Message sent!"
+    },
+    {
+      "title": "Error!",
+      "paragraph": "Sending failed..."
+    },
+    {
+      "title": "Error!",
+      "paragraph": "Please fill out all fields correctly!"
     }
   ]
 }

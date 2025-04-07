@@ -15,7 +15,11 @@
 }
 
 .title {
-  line-height: 48px;
+  line-height: 64px;
+
+  @media (max-width: 800px) {
+    line-height: 48px;
+  }
 }
 
 .first-title {

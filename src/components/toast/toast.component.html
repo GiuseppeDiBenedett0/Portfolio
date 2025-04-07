@@ -1,4 +1,9 @@
-<div *ngIf="isVisible" [@toastAnimation] class="toastContainer">
-  <h3 class="toastTitle">{{ toastTitle }}</h3>
+<div
+  *ngIf="isVisible"
+  [@toastAnimation]
+  class="toastContainer"
+  [ngClass]="toastType"
+>
+  <h3 class="toastTitle" [ngClass]="toastType">{{ toastTitle }}</h3>
   <p class="toastParagraph">{{ toastParagraph }}</p>
 </div>

@@ -20,9 +20,10 @@ interface ContactData {
 export class ContactComponent implements OnInit {
   message: boolean = false;
   contactContent = signal<ContactData | null>(null);
-  toastTitle = '';
-  toastParagraph = '';
+  toastTitle: string = '';
+  toastParagraph: string = '';
   showToast: boolean = false;
+  toastType: 'success' | 'error' = 'success';
 
   readonly languageService = inject(LanguageService);
   readonly currentLanguage = signal(this.languageService.currentLanguage());
@@ -57,6 +58,7 @@ export class ContactComponent implements OnInit {
   sendForm(form: NgForm) {
     if (form.invalid) {
       //Form non compilato correttamente.
+      this.toastType = 'error';
       this.toastText(2);
       this.showToast = true;
       setTimeout(() => {
@@ -79,9 +81,11 @@ export class ContactComponent implements OnInit {
         if (response.ok) {
           form.resetForm();
           //Form inviato con successo.
+          this.toastType = 'success';
           this.toastText(0);
         } else {
           //Errore lato server.
+          this.toastType = 'error';
           this.toastText(1);
         }
 
@@ -92,6 +96,7 @@ export class ContactComponent implements OnInit {
       })
       .catch((error) => {
         //Errore di rete o server.
+        this.toastType = 'error';
         this.toastText(1);
         this.showToast = true;
         setTimeout(() => {
@@ -100,7 +105,7 @@ export class ContactComponent implements OnInit {
       });
   }
 
-   //Imposta il testo del toast.
+  //Imposta il testo del toast.
   toastText(index: number) {
     if (
       this.languageService.dataLoaded() &&

@@ -25,9 +25,23 @@
 
 .text-column {
   margin: 8px;
+  min-height: 400px;
+
+  @media (max-width: 1278px) {
+    min-height: 450px;
+  }
+
+  @media (max-width: 1156px) {
+    min-height: 500px;
+  }
+
+  @media (max-width: 1061px) {
+    min-height: 550px;
+  }
 
   @media (max-width: 1056px) {
     padding: 24px 0 24px 0;
+    min-height: 100%;
   }
 
   @media (max-width: 991px) {

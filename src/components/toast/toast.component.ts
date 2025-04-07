@@ -28,4 +28,5 @@ export class ToastComponent {
   @Input() isVisible: boolean = true;
   @Input() toastTitle = '';
   @Input() toastParagraph = '';
+  @Input() toastType: 'success' | 'error' = 'success';
 }

@@ -134,6 +134,7 @@ html {
     @include mat.form-field-overrides(
       (
         filled-container-color: #ffffff,
+        filled-input-text-color: #000000,
         filled-label-text-color: #0000007e,
         filled-focus-label-text-color: #0000007e,
         filled-hover-label-text-color: #0000007e,
@@ -181,8 +182,8 @@ html {
     }
   }
 
-   //Footer
-   .footer {
+  //Footer
+  .footer {
     background-color: #040404;
   }
 }
@@ -309,6 +310,7 @@ html.light-mode {
     @include mat.form-field-overrides(
       (
         filled-container-color: #ffffff,
+        filled-input-text-color: #000000,
         filled-label-text-color: #0000007e,
         filled-focus-label-text-color: #0000007e,
         filled-hover-label-text-color: #0000007e,

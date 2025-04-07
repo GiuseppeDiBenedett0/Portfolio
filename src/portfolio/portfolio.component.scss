@@ -8,6 +8,15 @@
 .project-card {
   margin-bottom: 80px;
   position: relative;
+
+  @media (max-width: 800px) {
+    margin-bottom: 40px;
+  }
+  
+  @media (max-width: 470px) {
+    margin-bottom: 40px;
+    width: 340px
+  }
 }
 
 .portfolio-section-title {

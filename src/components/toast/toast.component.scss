@@ -12,11 +12,27 @@
   z-index: 20;
   padding: 10px;
   border-radius: 5px;
+
+  &.success {
+    background-color: #cbffcc;
+  }
+
+  &.error {
+    background-color: #ffd8d5;
+  }
 }
 
 .toastTitle {
-  margin: 0;
+  margin: 8px 0 8px 0;
   font-size: 1.2rem;
+
+  &.success {
+    color: #2cc931;
+  }
+
+  &.error {
+    color: #ff2f20;
+  }
 }
 
 .toastParagraph {

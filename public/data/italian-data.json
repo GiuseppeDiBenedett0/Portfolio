@@ -10,18 +10,18 @@
     { "title1": "Ciao, Sono" },
     { "title2": "Giuseppe Di Benedetto" },
     { "title3": "Full Stack Developer" },
-    { "title4": "Residente a Cagliari" }
+    { "title4": "Vivo a Cagliari" }
   ],
   "About": [
     { "title": "Chi sono:" },
     {
-      "paragraph": "Sono un appassionato di programmazione e manutenzione hardware dei PC. La curiosità e la voglia di apprendere mi hanno spinto a esplorare il mondo della programmazione web nel 2022, quando ho iniziato ad approfondire HTML5 e CSS tramite corsi online. Questa esperienza ha suscitato in me un forte interesse per lo sviluppo web, motivandomi a proseguire con un corso di sviluppatore full stack presso TNV Academy di Cagliari nel 2023. Negli ultimi tempi mi sono concentrato principalmente su Angular, approfondendo le mie competenze in questo framework per la creazione di interfacce utente moderne e dinamiche. Al contempo, ho sviluppato un interesse crescente per tecnologie come React, MongoDB ed Express. Ho, inoltre, dimestichezza con il linguaggio Java e Spring."
+      "paragraph": "Sono uno sviluppatore appassionato di programmazione web e manutenzione hardware, con un interesse profondo per la tecnologia e l’apprendimento continuo. Nel 2023 ho frequentato un corso da sviluppatore full stack presso TNV Academy di Cagliari, dove ho consolidato le mie competenze, e da allora ho continuato ad approfondire autonomamente le mie conoscenze. Ho realizzato svariati siti web, concentrandomi principalmente sul lato frontend e migliorando le mie competenze nel design delle interfacce utente. Ho imparato a bilanciare estetica e funzionalità, riuscendo a creare esperienze utente sempre più moderne e responsive. Sto attivamente continuando i miei studi per imparare nuovi approcci e non rimanere indietro con le tecnologie che già conosco."
     }
   ],
   "Skills": [
     {
       "title": "Competenze Sviluppo Web",
-      "paragraph": "Morem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. ",
+      "paragraph": "Come sviluppatore frontend con esperienza in Angular e React, costruisco applicazioni dinamiche e responsive, offrendo un'esperienza utente fluida. Utilizzo tecnologie moderne come HTML5, CSS, JavaScript e TypeScript per creare soluzioni scalabili e facilmente adattabili. Continuo a perfezionare le mie competenze per rimanere aggiornato con le ultime innovazioni nel campo.",
       "icons": [
         {
           "name": "Html5",
@@ -82,7 +82,7 @@
     },
     {
       "title": "Competenze Web Design",
-      "paragraph": "Morem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. ",
+      "paragraph": "Mi concentro sulla creazione di design web visivamente accattivanti e facili da usare. Utilizzando diversi strumenti creativi, realizzo design che rispondono alle esigenze degli utenti e migliorano l'esperienza di navigazione. Ogni progetto è pensato per essere sempre più intuitivo, con un focus sull'accessibilità e sulla facilità d'uso. Continuo a sperimentare nuove tecniche per creare soluzioni che soddisfino le aspettative degli utenti.",
       "icons": [
         {
           "name": "FIGMA",
@@ -99,7 +99,7 @@
     },
     {
       "title": "Linguaggi Di Programazzione",
-      "paragraph": "Morem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. ",
+      "paragraph": "Ho imparato ad utilizzare diversi linguaggi di programmazione, che mi hanno fornito una solida base logica e una buona comprensione delle strutture e delle architetture software. Queste conoscenze hanno rafforzato il mio approccio alla scrittura di codice chiaro, efficiente e ben strutturato.",
       "icons": [
         { "name": "C", "src": "/c.svg", "alt": "C" },
         { "name": "JAVA", "src": "/logos_java.svg", "alt": "JAVA" }
@@ -107,7 +107,7 @@
     },
     {
       "title": "Competenze Tools Vari",
-      "paragraph": "Morem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. ",
+      "paragraph": "Questi strumenti mi permettono di gestire e monitorare i vari aspetti del lavoro, dalla collaborazione con il team alla gestione del codice, fino al testing e alla documentazione. Con questi tool rendo più organizzato il mio lavoro e più efficiente ogni fase dello sviluppo.",
       "icons": [
         { "name": "SLACK", "src": "/devicon_slack.svg", "alt": "SLACK" },
         { "name": "POSTMAN", "src": "/devicon_postman.svg", "alt": "POSTMAN" },
@@ -158,7 +158,7 @@
     {
       "sectionTitle": "Contatti",
       "text": "Sentiti libero di scrivermi!",
-      "nameInput": "Nome",
+      "nameInput": "Nome, Cognome o Nome dell'azienda",
       "emailInput": "Email",
       "textInput": "Messaggio",
       "button": "Invia"
@@ -171,16 +171,16 @@
   ],
   "ToastMessage": [
     {
-      "title": "Form aggiornato",
-      "paragraph": "Chissà che succede"
+      "title": "Successo!",
+      "paragraph": "Messaggio inviato!"
     },
     {
       "title": "Errore!",
-      "paragraph": "Form non valido!"
+      "paragraph": "L'invio non è andato a buon fine..."
     },
     {
-      "title": "Form non compilato correttamente!",
-      "paragraph": "Chissà che succede"
+      "title": "Errore!",
+      "paragraph": "Compila in modo corretto tutti i campi!"
     }
   ]
 }
