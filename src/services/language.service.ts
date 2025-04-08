@@ -55,7 +55,20 @@ export class LanguageService {
   loadSiteData(language: Language): Observable<SiteData> {
     const filePath =
       language === 'IT' ? '/data/italian-data.json' : '/data/english-data.json';
-    return this.http.get<SiteData>(filePath);
+    console.log(
+      'LanguageService - loadSiteData - Chiamata a http.get:',
+      filePath
+    );
+    return this.http.get<SiteData>(filePath).pipe(
+      tap((data) => {
+        console.log('LanguageService - loadSiteData - Dati ricevuti:', data);
+        this.siteData = data;
+        this.setLanguageFromLocalStorage(language);
+        this.updateDocumentLanguage(language);
+        this.currentLanguage.set(language);
+        this.dataLoaded.set(true);
+      })
+    );
   }
 
   //Recupera la lingua salvata nel localStorage, se presente.
@@ -83,11 +96,17 @@ export class LanguageService {
 
   //Inizializza la lingua all'avvio del servizio, recuperando i dati dal localStorage.
   async initLanguage(): Promise<void> {
-    const storedLanguage = this.getLanguageFromLocalStorage();
-    if (!storedLanguage) {
-      return;
+    if (typeof window === 'undefined') {
+      return; //Non caricare i dati durante il prerendering.
     }
-
+    
+    let storedLanguage = this.getLanguageFromLocalStorage();
+    
+    if (!storedLanguage) {
+      storedLanguage = 'IT';
+      this.setLanguageFromLocalStorage(storedLanguage);
+    }
+  
     return new Promise<void>((resolve) => {
       this.loadSiteData(storedLanguage).subscribe({
         next: (data) => {
@@ -104,4 +123,5 @@ export class LanguageService {
       });
     });
   }
+  
 }

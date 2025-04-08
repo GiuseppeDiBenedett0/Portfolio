@@ -158,7 +158,7 @@
     {
       "sectionTitle": "Contact",
       "text": "Feel free to send me a message!",
-      "nameInput": "Name, Surname or Company name",
+      "nameInput": "Name and Surname or Company name",
       "emailInput": "Email",
       "textInput": "Message",
       "button": "Submit"

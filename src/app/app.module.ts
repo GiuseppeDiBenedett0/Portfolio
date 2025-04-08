@@ -33,6 +33,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ToastComponent } from '../components/toast/toast.component';
+import { LanguageService } from '../services/language.service';
+import { ThemeService } from '../services/theme.service';
 
 @NgModule({
   declarations: [
@@ -66,6 +68,8 @@ import { ToastComponent } from '../components/toast/toast.component';
   providers: [
     provideClientHydration(withEventReplay()),
     provideHttpClient(withInterceptorsFromDi()),
+    ThemeService,
+    LanguageService,
   ],
   bootstrap: [AppComponent],
 })
