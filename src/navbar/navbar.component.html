@@ -1,6 +1,6 @@
 <div class="nav-body">
   <div class="nav-brand-container">
-    <img class="nav-brand-img" src="/Logo.svg" alt="Logo" />
+    <img class="nav-brand-img" src="/Logo.svg" alt="Logo" (click)="navigateToHome()"/>
   </div>
   <div class="nav-links" *ngIf="languageService.dataLoaded()">
     <a

@@ -145,10 +145,10 @@
           "github": "https://github.com/GiuseppeDiBenedett0/The-Dandy-House"
         },
         {
-          "src": "/locandina The Dandy Step.svg",
+          "src": "/my-portfolio.svg",
           "alt": "Il Mio Portfolio",
           "projectName": "Il Mio Portfolio",
-          "web": "https://the-dandy-step.web.app/home",
+          "web": "",
           "github": "https://github.com/GiuseppeDiBenedett0/Portfolio"
         }
       ]
@@ -157,8 +157,8 @@
   "Contact": [
     {
       "sectionTitle": "Contatti",
-      "text": "Sentiti libero di scrivermi!",
-      "nameInput": "Nome e Cognome o Nome dell'azienda",
+      "text": "Sei interessato al mio profilo? Contattami pure!",
+      "nameInput": "Nome e Cognome",
       "emailInput": "Email",
       "textInput": "Messaggio",
       "button": "Invia"
@@ -166,7 +166,7 @@
   ],
   "Footer": [
     {
-      "footerText": "Sito realizzato da Giuseppe Di Benedetto"
+      "footerText": "Giuseppe Di Benedetto ©"
     }
   ],
   "ToastMessage": [

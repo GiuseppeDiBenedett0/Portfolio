@@ -1,6 +1,9 @@
 <app-loading-spinner [isLoading]="showSpinner" />
 <div class="hide-content" [ngClass]="{ 'show-content': !showSpinner }">
-  <app-navbar (navigate)="onNavigate($event)"></app-navbar>
+  <app-navbar
+    (navigate)="onNavigate($event)"
+    (navigateHome)="brandNavigate('Home')"
+  ></app-navbar>
   <div id="Home" class="wrapper">
     <app-main />
   </div>
@@ -15,9 +18,9 @@
   <div id="Portfolio" class="wrapper">
     <app-portfolio />
   </div>
-  <div id="Contact" class="wrapper">
+  <div id="Contact" class="wrapper contact">
     <app-contact />
   </div>
   <div class="third-section-divider"></div>
-  <footer class="footer">{{ textFooter() }}</footer>
+  <footer class="footer">{{ textFooter() }} {{ year }}</footer>
 </div>

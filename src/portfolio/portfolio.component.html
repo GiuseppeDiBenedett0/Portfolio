@@ -10,7 +10,9 @@
   >
     <img class="project-img" [src]="project.src" [alt]="project.alt" />
     <div
+      *ngIf="project.web"
       class="project-link"
+      [ngClass]="{ 'single-icon': !project.github }"
       [@showLinks]="project.hovered ? 'visible' : 'hidden'"
     >
       <a class="link-a" [href]="project.web">
@@ -26,7 +28,9 @@
       </a>
     </div>
     <div
+      *ngIf="project.github"
       class="project-link"
+      [ngClass]="{ 'single-icon': !project.web }"
       [@showLinks]="project.hovered ? 'visible' : 'hidden'"
     >
       <a class="link-a" [href]="project.github">

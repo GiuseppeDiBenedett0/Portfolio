@@ -28,6 +28,7 @@ export class NavbarComponent implements OnInit {
 
   @Output() languageChange = new EventEmitter<string>();
   @Output() navigate = new EventEmitter<string>();
+  @Output() navigateHome = new EventEmitter<string>();
 
   readonly themeService = inject(ThemeService);
   readonly languageService = inject(LanguageService);
@@ -94,5 +95,9 @@ export class NavbarComponent implements OnInit {
 
   onNavigate(section: string) {
     this.navigate.emit(section);
+  }
+
+  navigateToHome() {
+    this.navigateHome.emit('Home');
   }
 }

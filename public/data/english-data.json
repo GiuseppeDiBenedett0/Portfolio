@@ -145,10 +145,10 @@
           "github": "https://github.com/GiuseppeDiBenedett0/The-Dandy-House"
         },
         {
-          "src": "/locandina The Dandy Step.svg",
+          "src": "/my-portfolio.svg",
           "alt": "My Portfolio",
           "projectName": "My Portfolio",
-          "web": "https://the-dandy-step.web.app/home",
+          "web": "",
           "github": "https://github.com/GiuseppeDiBenedett0/Portfolio"
         }
       ]
@@ -157,8 +157,8 @@
   "Contact": [
     {
       "sectionTitle": "Contact",
-      "text": "Feel free to send me a message!",
-      "nameInput": "Name and Surname or Company name",
+      "text": "Interested in my profile? Feel free to contact me!",
+      "nameInput": "Name and Surname",
       "emailInput": "Email",
       "textInput": "Message",
       "button": "Submit"
@@ -166,7 +166,7 @@
   ],
   "Footer": [
     {
-      "footerText": "Website developed by Giuseppe Di Benedetto"
+      "footerText": "Giuseppe Di Benedetto ©"
     }
   ],
   "ToastMessage": [

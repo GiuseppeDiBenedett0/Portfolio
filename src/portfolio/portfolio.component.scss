@@ -48,9 +48,6 @@
   position: absolute;
   top: 40%;
   transform: translateY(-50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   transition: transform 0.3s ease-in-out;
 
   @media (max-width: 1400px) {
@@ -104,6 +101,7 @@
   position: relative;
   bottom: 4px;
   border-radius: 0 0 8px 8px;
+  margin-bottom: -8px;
 }
 
 .project-name {
@@ -116,4 +114,14 @@
   @media (max-width: 590px) {
     font-size: 14px;
   }
+}
+
+.single-icon:nth-child(2) {
+  left: 45%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.single-icon:nth-child(3) {
+  right: 45%;
+  transform: translateX(50%) translateY(-50%);
 }

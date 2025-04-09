@@ -14,6 +14,7 @@ export class AppComponent {
   showSpinner: boolean = true;
   isVisible: boolean = false;
   textFooter = signal<string>('');
+  year = new Date().getFullYear();
   private readonly languageService = inject(LanguageService);
   readonly currentLanguage = signal(this.languageService.currentLanguage());
   private readonly document = inject(DOCUMENT);
@@ -90,5 +91,9 @@ export class AppComponent {
         this.languageService.siteData['Footer'][0]?.footerText
       );
     }
+  }
+
+  brandNavigate(section: string) {
+    this.scrollTo(section);
   }
 }
